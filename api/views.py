@@ -1,0 +1,132 @@
+from django.http import JsonResponse
+from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from .models import Role, User
+from rest_framework import viewsets
+from .serializers import RoleSerializer, UserListSerializer, UserSerializer, ContactUsQuerySerializer
+from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
+from .forms import UserForm
+from django.contrib.auth import authenticate, login
+from rest_framework import status
+from cms_project.models import ContactUsQuery
+
+
+@require_http_methods(["POST"])
+@csrf_exempt
+def registration(request):
+    form = UserForm(request.POST)
+    if form.is_valid():
+        user = form.save()
+        user._role = request.POST['role']
+        user.save()
+        content = {'message': 'You Registered Successfully!'}
+    else:
+        content = {
+            'message': 'Oops, Failed! :(',
+            'errors': form.errors
+           }
+    return JsonResponse(content)
+
+
+class UserRoleView(APIView):
+    permission_classes = (IsAuthenticated,)
+    def get(self, request):
+        user = request.user
+        role = Role.objects.get(user=user).role
+        content = {'role': role}
+        return Response(content)
+
+
+class UserRoleViewSets(viewsets.ModelViewSet):
+    model = Role
+    serializer_class = RoleSerializer
+    queryset = Role.objects.all()
+    permission_classes = (IsAuthenticated,)
+
+    def get_object(self):
+        user = Role.objects.get(user=self.request.user)
+        return user
+
+
+class UserLoginView(APIView):
+    @csrf_exempt
+    def post(self, request):
+        try:
+            username = request.data.get('username')
+            password = request.data.get('password')
+            print(username, password)
+            user = authenticate(username=username, password=password)
+            print(user)
+            if user:
+                login(request, user)
+                return Response({'msg': 'logged in'}, status=status.HTTP_200_OK)
+            else:
+                return Response({'msg': 'wrong credentials'}, status=status.HTTP_403_FORBIDDEN)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UsersListView(APIView):
+    def get(self, request):
+        try:
+            user_objs = User.objects.all()
+            user_objs_serializer = UserListSerializer(user_objs, many=True)
+            response = {}
+            response['user_list'] = user_objs_serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserDetailView(APIView):
+    def get(self, request, id):
+        try:
+            user = User.objects.get(id=id)
+            user_serializer = UserSerializer(user)
+            response = {}
+            response['user_data'] = user_serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    def put(self, request, id):
+        try:
+            user = User.objects.get(id=id)
+            user_serializer = UserSerializer(user, data=request.data, partial=True)
+            if user_serializer.is_valid():
+                user_serializer.save()
+                response = {}
+                response['msg'] = 'updated'
+                response['user_data'] = user_serializer.data
+                return Response(response, status=status.HTTP_200_OK)
+            else:
+                return Response({'msg': str(user_serializer.errors)}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ContactQueryListView(APIView):
+    def get(self, request):
+        try:
+            contact_us_objs = ContactUsQuery.objects.all()
+            contact_us_serializers = ContactUsQuerySerializer(contact_us_objs, many=True)
+            response = {}
+            response['data'] = contact_us_serializers.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ContactUsQueryDetailView(APIView):
+    def get(self, request, id):
+        try:
+            contact_us_obj = ContactUsQuery.objects.get(id=id)
+            contact_us_serializers = ContactUsQuerySerializer(contact_us_obj)
+            response = {}
+            response['data'] = contact_us_serializers.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
