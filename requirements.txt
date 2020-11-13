@@ -44,3 +44,4 @@ sqlparse==0.3.1
 Unidecode==1.1.1
 webencodings==0.5.1
 drf-yasg==1.20.0
+django-restful-admin==1.1.3
