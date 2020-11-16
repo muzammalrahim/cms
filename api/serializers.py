@@ -25,3 +25,10 @@ class ContactUsQuerySerializer(serializers.ModelSerializer):
 	class Meta:
 		model = ContactUsQuery
 		fields = '__all__'
+
+
+class LoginSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = User
+		fields = ('username','password')
+

@@ -5,13 +5,17 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .models import Role, User
 from rest_framework import viewsets
-from .serializers import RoleSerializer, UserListSerializer, UserSerializer, ContactUsQuerySerializer
+from .serializers import RoleSerializer, LoginSerializer, UserListSerializer, UserSerializer, ContactUsQuerySerializer
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from .forms import UserForm
 from django.contrib.auth import authenticate, login
-from rest_framework import status
+from rest_framework import status, generics
 from cms_project.models import ContactUsQuery
+from rest_framework.authtoken.models import Token
+from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+
 
 
 @require_http_methods(["POST"])
@@ -51,7 +55,12 @@ class UserRoleViewSets(viewsets.ModelViewSet):
         return user
 
 
-class UserLoginView(APIView):
+class UserLoginView(generics.GenericAPIView):
+
+    serializer_class = LoginSerializer
+    authentication_classes = []
+    permission_classes = (AllowAny, )
+
     @csrf_exempt
     def post(self, request):
         try:
@@ -61,12 +70,34 @@ class UserLoginView(APIView):
             user = authenticate(username=username, password=password)
             print(user)
             if user:
-                login(request, user)
-                return Response({'msg': 'logged in'}, status=status.HTTP_200_OK)
+                token, _ = Token.objects.get_or_create(user=user)
+                return Response({'token': token.key},
+                    status=status.HTTP_200_OK)
             else:
                 return Response({'msg': 'wrong credentials'}, status=status.HTTP_403_FORBIDDEN)
         except Exception as e:
             return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+# @csrf_exempt
+# @api_view(["POST"])
+# @permission_classes((AllowAny,))
+# @authentication_classes([])
+# def login(request):
+#     try:
+#         username = request.data.get('username')
+#         password = request.data.get('password')
+#         print(username, password)
+#         user = authenticate(username=username, password=password)
+#         print(user)
+#         if user:
+#             token, _ = Token.objects.get_or_create(user=user)
+#             return Response({'token': token.key},
+#                 status=status.HTTP_200_OK)
+#         else:
+#             return Response({'msg': 'wrong credentials'}, status=status.HTTP_403_FORBIDDEN)
+#     except Exception as e:
+#         return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UsersListView(APIView):

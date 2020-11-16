@@ -181,6 +181,7 @@ INSTALLED_APPS = [
     'djangocms_blog',
     'rest_framework',
     'drf_yasg',
+    'rest_framework.authtoken'
 ]
 
 LANGUAGES = (
@@ -270,7 +271,27 @@ META_USE_GOOGLEPLUS_PROPERTIES = True  # django-meta 1.x+
 META_USE_SCHEMAORG_PROPERTIES = True  # django-meta 2.x+
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated', ),
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.JSONParser',
+    ]
+}
+
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'basic': {
+            'type': 'basic'
+        }
+    },
+    'USE_SESSION_AUTH': False,
+    
 }
