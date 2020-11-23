@@ -1,3 +1,5 @@
 /venv/
+/env/
 /static/
 /.idea/
+/frontend/node_modules/

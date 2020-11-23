@@ -75,16 +75,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+SITE_URL = 'https://staging.tk:4000'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+STATIC_ROOT = os.path.join(DATA_DIR, 'frontend/build/static')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'cms_project', 'static'),
 )
 SITE_ID = 1
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -114,6 +114,7 @@ TEMPLATES = [
 MIDDLEWARE = [
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -123,7 +124,7 @@ MIDDLEWARE = [
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
 ]
 
 INSTALLED_APPS = [
@@ -136,6 +137,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'corsheaders',
 
     # custom app
     'api',
@@ -295,3 +297,7 @@ SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,
     
 }
+
+CORS_ORIGIN_WHITELIST = (
+       'http://localhost:3000', 'https://staging.tk:4000'
+)
