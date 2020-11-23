@@ -4,6 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
+def new_admin(request):
+	return render(request, 'build/index.html')
 
 @csrf_exempt
 def ContactFormView(request):
