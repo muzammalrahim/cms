@@ -138,6 +138,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.messages',
     'corsheaders',
+    'frontend.apps.FrontendConfig',
 
     # custom app
     'api',
