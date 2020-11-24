@@ -43,7 +43,7 @@ function LockPage() {
 						<CardContent className="flex flex-col items-center justify-center p-32">
 							<div className="min-w-full flex flex-col items-center justify-center sm:flex-row sm:justify-start sm:items-center -mx-8">
 								<div className="relative mx-8">
-									<Avatar className="w-72 h-72" src="assets/images/avatars/katherine.jpg" />
+									<Avatar className="w-72 h-72" src="static/images/avatars/katherine.jpg" />
 									<Icon className="text-32 absolute right-0 bottom-0" color="error">
 										lock
 									</Icon>

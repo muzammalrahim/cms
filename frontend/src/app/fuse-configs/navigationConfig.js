@@ -39,6 +39,29 @@ const navigationConfig = [
 				]
 			},
 			{
+				id: 'groups',
+				title: 'Groups',
+				translate: 'GROUPS',
+				type: 'collapse',
+				icon: 'group',
+				children: [
+					{
+						id: 'group_add',
+						title: 'Add',
+						type: 'item',
+						exact: true,
+						url: '/admin/auth/group/add'
+					},
+					{
+						id: 'group_list',
+						title: 'List',
+						type: 'item',
+						exact: true,
+						url: '/admin/auth/group'
+					}
+				]
+			},
+			{
 				id: 'calendar',
 				title: 'Calendar',
 				translate: 'CALENDAR',

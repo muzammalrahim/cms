@@ -19,7 +19,7 @@ const defaultFormState = {
 	id: '',
 	name: '',
 	lastName: '',
-	avatar: 'assets/images/avatars/profile.jpg',
+	avatar: 'static/images/avatars/profile.jpg',
 	nickname: '',
 	company: '',
 	jobTitle: '',

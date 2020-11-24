@@ -67,7 +67,7 @@ class JwtService extends FuseUtils.EventEmitter {
 							role: 'admin',
 							data: {
 								displayName: `${res.data.first_name} ${res.data.last_name}`,
-								photoURL: 'assets/images/avatars/Abbott.jpg',
+								photoURL: 'static/images/avatars/Abbott.jpg',
 								email: res.data.email,
 								settings: {
 									layout: {

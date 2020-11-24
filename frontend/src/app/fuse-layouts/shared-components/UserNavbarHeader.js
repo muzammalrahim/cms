@@ -62,7 +62,7 @@ function UserNavbarHeader(props) {
 				src={
 					user.data.photoURL && user.data.photoURL !== ''
 						? user.data.photoURL
-						: 'assets/images/avatars/profile.jpg'
+						: 'static/images/avatars/profile.jpg'
 				}
 			/>
 		</AppBar>

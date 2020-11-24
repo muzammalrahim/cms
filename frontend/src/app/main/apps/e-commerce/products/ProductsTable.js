@@ -153,7 +153,7 @@ function ProductsTable(props) {
 											) : (
 												<img
 													className="w-full block rounded"
-													src="assets/images/ecommerce/product-image-placeholder.png"
+													src="static/images/ecommerce/product-image-placeholder.png"
 													alt={n.name}
 												/>
 											)}

@@ -178,7 +178,7 @@ function Product(props) {
 									) : (
 										<img
 											className="w-32 sm:w-48 rounded"
-											src="assets/images/ecommerce/product-image-placeholder.png"
+											src="static/images/ecommerce/product-image-placeholder.png"
 											alt={form.name}
 										/>
 									)}

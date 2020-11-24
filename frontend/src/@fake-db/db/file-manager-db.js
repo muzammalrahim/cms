@@ -53,7 +53,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '5',
@@ -67,7 +67,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '6',
@@ -81,7 +81,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '7',
@@ -95,7 +95,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '8',
@@ -109,7 +109,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '9',
@@ -123,7 +123,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '10',
@@ -137,7 +137,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		},
 		{
 			id: '11',
@@ -151,7 +151,7 @@ const fileManagerDB = {
 			extention: '',
 			location: 'My Files > Documents',
 			offline: true,
-			preview: 'assets/images/etc/sample-file-preview.jpg'
+			preview: 'static/images/etc/sample-file-preview.jpg'
 		}
 	]
 };

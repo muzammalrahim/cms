@@ -18,7 +18,7 @@ const authDB = {
 			role: 'admin',
 			data: {
 				displayName: 'Abbott Keitch',
-				photoURL: 'assets/images/avatars/Abbott.jpg',
+				photoURL: 'static/images/avatars/Abbott.jpg',
 				email: 'admin',
 				settings: {
 					layout: {
@@ -61,7 +61,7 @@ const authDB = {
 			role: 'staff',
 			data: {
 				displayName: 'Arnold Matlock',
-				photoURL: 'assets/images/avatars/Arnold.jpg',
+				photoURL: 'static/images/avatars/Arnold.jpg',
 				email: 'staff',
 				settings: {
 					layout: {
@@ -163,7 +163,7 @@ mock.onPost('/api/auth/register').reply(request => {
 			role: 'admin',
 			data: {
 				displayName,
-				photoURL: 'assets/images/avatars/Abbott.jpg',
+				photoURL: 'static/images/avatars/Abbott.jpg',
 				email,
 				settings: {},
 				shortcuts: []

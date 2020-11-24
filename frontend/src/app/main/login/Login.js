@@ -3,14 +3,14 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import { darken } from '@material-ui/core/styles/colorManipulator';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+// import Tab from '@material-ui/core/Tab';
+// import Tabs from '@material-ui/core/Tabs';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React /*, { useState }*/ from 'react';
 import { Link } from 'react-router-dom';
-import Auth0LoginTab from './tabs/Auth0LoginTab';
-import FirebaseLoginTab from './tabs/FirebaseLoginTab';
+// import Auth0LoginTab from './tabs/Auth0LoginTab';
+// import FirebaseLoginTab from './tabs/FirebaseLoginTab';
 import JWTLoginTab from './tabs/JWTLoginTab';
 
 const useStyles = makeStyles(theme => ({
@@ -25,17 +25,17 @@ const useStyles = makeStyles(theme => ({
 
 function Login() {
 	const classes = useStyles();
-	const [selectedTab, setSelectedTab] = useState(0);
+	// const [selectedTab, setSelectedTab] = useState(0);
 
-	function handleTabChange(event, value) {
-		setSelectedTab(value);
-	}
+	// function handleTabChange(event, value) {
+	// 	setSelectedTab(value);
+	// }
 
 	return (
 		<div className={clsx(classes.root, 'flex flex-col flex-1 flex-shrink-0 p-24 md:flex-row md:p-0')}>
 			<div className="flex flex-col flex-grow-0 items-center text-white p-16 text-center md:p-128 md:items-start md:flex-shrink-0 md:flex-1 md:text-left">
 				<FuseAnimate animation="transition.expandIn">
-					<img className="w-128 mb-32" src="assets/images/logos/fuse.svg" alt="logo" />
+					<img className="w-128 mb-32" src="static/images/logos/fuse.svg" alt="logo" />
 				</FuseAnimate>
 
 				<FuseAnimate animation="transition.slideUpIn" delay={300}>
@@ -69,7 +69,7 @@ function Login() {
 								icon={
 									<img
 										className="h-40 p-4 bg-black rounded-12"
-										src="assets/images/logos/jwt.svg"
+										src="static/images/logos/jwt.svg"
 										alt="firebase"
 									/>
 								}
@@ -77,12 +77,12 @@ function Login() {
 								label="JWT"
 							/>
 							<Tab
-								icon={<img className="h-40" src="assets/images/logos/firebase.svg" alt="firebase" />}
+								icon={<img className="h-40" src="static/images/logos/firebase.svg" alt="firebase" />}
 								className="min-w-0"
 								label="Firebase"
 							/>
 							<Tab
-								icon={<img className="h-40" src="assets/images/logos/auth0.svg" alt="auth0" />}
+								icon={<img className="h-40" src="static/images/logos/auth0.svg" alt="auth0" />}
 								className="min-w-0"
 								label="Auth0"
 							/>

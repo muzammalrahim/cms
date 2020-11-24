@@ -7,6 +7,7 @@ import LoginConfig from 'app/main/login/LoginConfig';
 import LogoutConfig from 'app/main/logout/LogoutConfig';
 import pagesConfigs from 'app/main/pages/pagesConfigs';
 import RegisterConfig from 'app/main/register/RegisterConfig';
+import GroupsConfigration from 'app/main/pages/groups/GroupsConfigration';
 import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
@@ -21,7 +22,8 @@ const routeConfigs = [
 	LoginConfig,
 	RegisterConfig,
 	LogoutConfig,
-	CallbackConfig
+	CallbackConfig,
+	GroupsConfigration
 ];
 
 const routes = [

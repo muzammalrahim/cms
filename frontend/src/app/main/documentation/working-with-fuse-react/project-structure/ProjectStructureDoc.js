@@ -32,7 +32,7 @@ function ProjectStructureDoc() {
 						Here’s the project structure of the Fuse React:
 					</Typography>
 
-					<img src="assets/images/etc/fuse-react-project-structure.jpg" alt="fuse react project structure" />
+					<img src="static/images/etc/fuse-react-project-structure.jpg" alt="fuse react project structure" />
 				</div>
 			}
 		/>

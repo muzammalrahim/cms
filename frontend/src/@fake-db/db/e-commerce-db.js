@@ -15,52 +15,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -89,52 +89,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -163,52 +163,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -237,52 +237,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -311,52 +311,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -385,52 +385,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -459,52 +459,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -533,52 +533,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -607,52 +607,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -681,52 +681,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -755,52 +755,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -829,52 +829,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -903,52 +903,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -977,52 +977,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1051,52 +1051,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1125,52 +1125,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1199,52 +1199,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1273,52 +1273,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1347,52 +1347,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1421,52 +1421,52 @@ const eCommerceDB = {
 			images: [
 				{
 					id: 0,
-					url: 'assets/images/ecommerce/a-walk-amongst-friends.jpg',
+					url: 'static/images/ecommerce/a-walk-amongst-friends.jpg',
 					type: 'image'
 				},
 				{
 					id: 1,
-					url: 'assets/images/ecommerce/braies-lake.jpg',
+					url: 'static/images/ecommerce/braies-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 2,
-					url: 'assets/images/ecommerce/fall-glow.jpg',
+					url: 'static/images/ecommerce/fall-glow.jpg',
 					type: 'image'
 				},
 				{
 					id: 3,
-					url: 'assets/images/ecommerce/first-snow.jpg',
+					url: 'static/images/ecommerce/first-snow.jpg',
 					type: 'image'
 				},
 				{
 					id: 4,
-					url: 'assets/images/ecommerce/lago-di-braies.jpg',
+					url: 'static/images/ecommerce/lago-di-braies.jpg',
 					type: 'image'
 				},
 				{
 					id: 5,
-					url: 'assets/images/ecommerce/lago-di-sorapis.jpg',
+					url: 'static/images/ecommerce/lago-di-sorapis.jpg',
 					type: 'image'
 				},
 				{
 					id: 6,
-					url: 'assets/images/ecommerce/never-stop-changing.jpg',
+					url: 'static/images/ecommerce/never-stop-changing.jpg',
 					type: 'image'
 				},
 				{
 					id: 7,
-					url: 'assets/images/ecommerce/reaching.jpg',
+					url: 'static/images/ecommerce/reaching.jpg',
 					type: 'image'
 				},
 				{
 					id: 8,
-					url: 'assets/images/ecommerce/morain-lake.jpg',
+					url: 'static/images/ecommerce/morain-lake.jpg',
 					type: 'image'
 				},
 				{
 					id: 9,
-					url: 'assets/images/ecommerce/yosemite.jpg',
+					url: 'static/images/ecommerce/yosemite.jpg',
 					type: 'image'
 				}
 			],
@@ -1497,7 +1497,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Dollie',
 				lastName: 'Bullock',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1520,7 +1520,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1528,7 +1528,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1536,7 +1536,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -1581,7 +1581,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Holmes',
 				lastName: 'Hines',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1604,7 +1604,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1612,7 +1612,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1620,7 +1620,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -1665,7 +1665,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Serena',
 				lastName: 'Glover',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1688,7 +1688,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1696,7 +1696,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1704,7 +1704,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -1749,7 +1749,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Dianne',
 				lastName: 'Prince',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1772,7 +1772,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1780,7 +1780,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1788,7 +1788,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -1833,7 +1833,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Frankie',
 				lastName: 'Hewitt',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1856,7 +1856,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1864,7 +1864,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1872,7 +1872,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -1917,7 +1917,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Cole',
 				lastName: 'Holcomb',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -1940,7 +1940,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -1948,7 +1948,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -1956,7 +1956,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2001,7 +2001,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Merrill',
 				lastName: 'Richardson',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2024,7 +2024,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2032,7 +2032,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2040,7 +2040,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2085,7 +2085,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Morgan',
 				lastName: 'Pitts',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2108,7 +2108,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2116,7 +2116,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2124,7 +2124,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2169,7 +2169,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Krista',
 				lastName: 'Mathis',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2192,7 +2192,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2200,7 +2200,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2208,7 +2208,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2253,7 +2253,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Hayden',
 				lastName: 'Fitzgerald',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2276,7 +2276,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2284,7 +2284,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2292,7 +2292,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2337,7 +2337,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Cotton',
 				lastName: 'Carlson',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2360,7 +2360,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2368,7 +2368,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2376,7 +2376,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2421,7 +2421,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Kaye',
 				lastName: 'Baldwin',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2444,7 +2444,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2452,7 +2452,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2460,7 +2460,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2505,7 +2505,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Iva',
 				lastName: 'Clark',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2528,7 +2528,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2536,7 +2536,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2544,7 +2544,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2589,7 +2589,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Shauna',
 				lastName: 'Rosales',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2612,7 +2612,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2620,7 +2620,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2628,7 +2628,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2673,7 +2673,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Carroll',
 				lastName: 'Dotson',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2696,7 +2696,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2704,7 +2704,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2712,7 +2712,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2757,7 +2757,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Jeannie',
 				lastName: 'Reese',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2780,7 +2780,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2788,7 +2788,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2796,7 +2796,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2841,7 +2841,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Dena',
 				lastName: 'Rowe',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2864,7 +2864,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2872,7 +2872,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2880,7 +2880,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -2925,7 +2925,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Blankenship',
 				lastName: 'Lynch',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -2948,7 +2948,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -2956,7 +2956,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -2964,7 +2964,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -3009,7 +3009,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Whitley',
 				lastName: 'Mcgee',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -3032,7 +3032,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -3040,7 +3040,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -3048,7 +3048,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [
@@ -3093,7 +3093,7 @@ const eCommerceDB = {
 				id: 1,
 				firstName: 'Hood',
 				lastName: 'Hodges',
-				avatar: 'assets/images/avatars/Abbott.jpg',
+				avatar: 'static/images/avatars/Abbott.jpg',
 				company: 'Saois',
 				jobTitle: 'Digital Archivist',
 				email: 'abbott@withinpixels.com',
@@ -3116,7 +3116,7 @@ const eCommerceDB = {
 					price: '10.24',
 					quantity: 1,
 					total: '10.24',
-					image: 'assets/images/ecommerce/a-walk-amongst-friends.jpg'
+					image: 'static/images/ecommerce/a-walk-amongst-friends.jpg'
 				},
 				{
 					id: 2,
@@ -3124,7 +3124,7 @@ const eCommerceDB = {
 					price: '24.62',
 					quantity: 1,
 					total: '24.62',
-					image: 'assets/images/ecommerce/lago-di-braies.jpg'
+					image: 'static/images/ecommerce/lago-di-braies.jpg'
 				},
 				{
 					id: 3,
@@ -3132,7 +3132,7 @@ const eCommerceDB = {
 					price: '49.29',
 					quantity: 1,
 					total: '49.29',
-					image: 'assets/images/ecommerce/never-stop-changing.jpg'
+					image: 'static/images/ecommerce/never-stop-changing.jpg'
 				}
 			],
 			status: [

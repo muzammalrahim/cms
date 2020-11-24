@@ -27,22 +27,22 @@ const sampleMembers = [
 	{
 		id: '56027c1930450d8bf7b10758',
 		name: 'Alice Freeman',
-		avatar: 'assets/images/avatars/alice.jpg'
+		avatar: 'static/images/avatars/alice.jpg'
 	},
 	{
 		id: '26027s1930450d8bf7b10828',
 		name: 'Danielle Obrien',
-		avatar: 'assets/images/avatars/danielle.jpg'
+		avatar: 'static/images/avatars/danielle.jpg'
 	},
 	{
 		id: '76027g1930450d8bf7b10958',
 		name: 'James Lewis',
-		avatar: 'assets/images/avatars/james.jpg'
+		avatar: 'static/images/avatars/james.jpg'
 	},
 	{
 		id: '36027j1930450d8bf7b10158',
 		name: 'John Doe',
-		avatar: 'assets/images/avatars/Velazquez.jpg'
+		avatar: 'static/images/avatars/Velazquez.jpg'
 	}
 ];
 

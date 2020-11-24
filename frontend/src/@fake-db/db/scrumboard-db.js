@@ -85,14 +85,14 @@ const scrumboardDB = {
 						{
 							id: '67027cahbe3b52ecf2dc631c',
 							name: 'mail.jpg',
-							src: 'assets/images/scrumboard/mail.jpg',
+							src: 'static/images/scrumboard/mail.jpg',
 							time: 'Added Nov 3 at 15:22AM',
 							type: 'image'
 						},
 						{
 							id: '56027cfcbe1b72ecf1fc452a',
 							name: 'calendar.jpg',
-							src: 'assets/images/scrumboard/calendar.jpg',
+							src: 'static/images/scrumboard/calendar.jpg',
 							time: 'Added Nov 1 at 12:34PM',
 							type: 'image'
 						}
@@ -323,14 +323,14 @@ const scrumboardDB = {
 						{
 							id: '12027cafbe3b52ecf2ef632c',
 							name: 'header-.jpg',
-							src: 'assets/images/scrumboard/header-1.jpg',
+							src: 'static/images/scrumboard/header-1.jpg',
 							time: 'Added Nov 3 at 15:22AM',
 							type: 'image'
 						},
 						{
 							id: '55027ced1e1a12ecf1fced2a',
 							name: 'header-2.jpg',
-							src: 'assets/images/scrumboard/header-2.jpg',
+							src: 'static/images/scrumboard/header-2.jpg',
 							time: 'Added Nov 1 at 12:34PM',
 							type: 'image'
 						}
@@ -462,22 +462,22 @@ const scrumboardDB = {
 				{
 					id: '56027c1930450d8bf7b10758',
 					name: 'Alice Freeman',
-					avatar: 'assets/images/avatars/alice.jpg'
+					avatar: 'static/images/avatars/alice.jpg'
 				},
 				{
 					id: '26027s1930450d8bf7b10828',
 					name: 'Danielle Obrien',
-					avatar: 'assets/images/avatars/danielle.jpg'
+					avatar: 'static/images/avatars/danielle.jpg'
 				},
 				{
 					id: '76027g1930450d8bf7b10958',
 					name: 'James Lewis',
-					avatar: 'assets/images/avatars/james.jpg'
+					avatar: 'static/images/avatars/james.jpg'
 				},
 				{
 					id: '36027j1930450d8bf7b10158',
 					name: 'John Doe',
-					avatar: 'assets/images/avatars/Velazquez.jpg'
+					avatar: 'static/images/avatars/Velazquez.jpg'
 				}
 			],
 			labels: [
@@ -536,13 +536,13 @@ const scrumboardDB = {
 						{
 							id: '56027cfcbe1b72ecf1fc452a',
 							name: 'calendar-app-design.jpg',
-							src: 'assets/images/scrumboard/calendar.jpg',
+							src: 'static/images/scrumboard/calendar.jpg',
 							time: 'Added Nov 1 at 12:34PM',
 							type: 'image'
 						},
 						{
 							id: '67027cahbe3b52ecf2dc631c',
-							url: 'assets/images/scrumboard/calendar.jpg',
+							url: 'static/images/scrumboard/calendar.jpg',
 							time: 'Added Nov 3 at 15:22AM',
 							type: 'link'
 						}
@@ -633,7 +633,7 @@ const scrumboardDB = {
 						{
 							id: '5603a2ae2bbd55bb2db57478',
 							name: 'mail-app-design.jpg',
-							src: 'assets/images/scrumboard/mail.jpg',
+							src: 'static/images/scrumboard/mail.jpg',
 							time: 'Added Nov 1 at 12:34PM',
 							type: 'image'
 						}
@@ -648,22 +648,22 @@ const scrumboardDB = {
 				{
 					id: '56027c1930450d8bf7b10758',
 					name: 'Alice Freeman',
-					avatar: 'assets/images/avatars/alice.jpg'
+					avatar: 'static/images/avatars/alice.jpg'
 				},
 				{
 					id: '26027s1930450d8bf7b10828',
 					name: 'Danielle Obrien',
-					avatar: 'assets/images/avatars/danielle.jpg'
+					avatar: 'static/images/avatars/danielle.jpg'
 				},
 				{
 					id: '76027g1930450d8bf7b10958',
 					name: 'James Lewis',
-					avatar: 'assets/images/avatars/james.jpg'
+					avatar: 'static/images/avatars/james.jpg'
 				},
 				{
 					id: '36027j1930450d8bf7b10158',
 					name: 'John Doe',
-					avatar: 'assets/images/avatars/Velazquez.jpg'
+					avatar: 'static/images/avatars/Velazquez.jpg'
 				}
 			],
 			labels: [

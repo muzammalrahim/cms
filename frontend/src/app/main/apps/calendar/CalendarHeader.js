@@ -14,7 +14,7 @@ import connect from 'react-redux/es/connect/connect';
 /* eslint-disable react/jsx-no-bind */
 const styles = theme => ({
 	root: {
-		backgroundImage: 'url("../../assets/images/backgrounds/header-bg.png")',
+		backgroundImage: 'url("../../static/images/backgrounds/header-bg.png")',
 		backgroundColor: '#FAFAFA',
 		color: '#FFFFFF',
 		backgroundSize: 'cover',
@@ -31,51 +31,51 @@ const styles = theme => ({
 			background: 'rgba(0, 0, 0, 0.45)'
 		},
 		'&.Jan': {
-			backgroundImage: "url('/assets/images/calendar/winter.jpg')",
+			backgroundImage: "url('/static/images/calendar/winter.jpg')",
 			backgroundPosition: '0 85%'
 		},
 		'&.Feb': {
-			backgroundImage: "url('/assets/images/calendar/winter.jpg')",
+			backgroundImage: "url('/static/images/calendar/winter.jpg')",
 			backgroundPosition: '0 85%'
 		},
 		'&.Mar': {
-			backgroundImage: "url('/assets/images/calendar/spring.jpg')",
+			backgroundImage: "url('/static/images/calendar/spring.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.Apr': {
-			backgroundImage: "url('/assets/images/calendar/spring.jpg')",
+			backgroundImage: "url('/static/images/calendar/spring.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.May': {
-			backgroundImage: "url('/assets/images/calendar/spring.jpg')",
+			backgroundImage: "url('/static/images/calendar/spring.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.Jun': {
-			backgroundImage: "url('/assets/images/calendar/summer.jpg')",
+			backgroundImage: "url('/static/images/calendar/summer.jpg')",
 			backgroundPosition: '0 80%'
 		},
 		'&.Jul': {
-			backgroundImage: "url('/assets/images/calendar/summer.jpg')",
+			backgroundImage: "url('/static/images/calendar/summer.jpg')",
 			backgroundPosition: '0 80%'
 		},
 		'&.Aug': {
-			backgroundImage: "url('/assets/images/calendar/summer.jpg')",
+			backgroundImage: "url('/static/images/calendar/summer.jpg')",
 			backgroundPosition: '0 80%'
 		},
 		'&.Sep': {
-			backgroundImage: "url('/assets/images/calendar/autumn.jpg')",
+			backgroundImage: "url('/static/images/calendar/autumn.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.Oct': {
-			backgroundImage: "url('/assets/images/calendar/autumn.jpg')",
+			backgroundImage: "url('/static/images/calendar/autumn.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.Nov': {
-			backgroundImage: "url('/assets/images/calendar/autumn.jpg')",
+			backgroundImage: "url('/static/images/calendar/autumn.jpg')",
 			backgroundPosition: '0 40%'
 		},
 		'&.Dec': {
-			backgroundImage: "url('/assets/images/calendar/winter.jpg')",
+			backgroundImage: "url('/static/images/calendar/winter.jpg')",
 			backgroundPosition: '0 85%'
 		}
 	}

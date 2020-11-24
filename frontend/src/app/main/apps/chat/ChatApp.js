@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 		right: 0,
 		top: 0,
 		height: headerHeight,
-		backgroundImage: 'url("../../assets/images/backgrounds/header-bg.png")',
+		backgroundImage: 'url("../../static/images/backgrounds/header-bg.png")',
 		backgroundColor: theme.palette.primary.dark,
 		backgroundSize: 'cover',
 		pointerEvents: 'none'
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 		flex: '1 1 100%',
 		flexDirection: 'row',
-		backgroundImage: 'url("/assets/images/patterns/rain-grey.png")',
+		backgroundImage: 'url("/static/images/patterns/rain-grey.png")',
 		backgroundColor: theme.palette.background.paper,
 		boxShadow: theme.shadows[1],
 		borderRadius: 8,

@@ -1299,7 +1299,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/james.jpg'
+								value: 'static/images/avatars/james.jpg'
 							},
 							{
 								id: 'name',
@@ -1328,7 +1328,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/katherine.jpg'
+								value: 'static/images/avatars/katherine.jpg'
 							},
 							{
 								id: 'name',
@@ -1357,7 +1357,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/garry.jpg'
+								value: 'static/images/avatars/garry.jpg'
 							},
 							{
 								id: 'name',
@@ -1386,7 +1386,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/andrew.jpg'
+								value: 'static/images/avatars/andrew.jpg'
 							},
 							{
 								id: 'name',
@@ -1415,7 +1415,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/jane.jpg'
+								value: 'static/images/avatars/jane.jpg'
 							},
 							{
 								id: 'name',
@@ -1444,7 +1444,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/alice.jpg'
+								value: 'static/images/avatars/alice.jpg'
 							},
 							{
 								id: 'name',
@@ -1473,7 +1473,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/vincent.jpg'
+								value: 'static/images/avatars/vincent.jpg'
 							},
 							{
 								id: 'name',
@@ -1502,7 +1502,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/joyce.jpg'
+								value: 'static/images/avatars/joyce.jpg'
 							},
 							{
 								id: 'name',
@@ -1531,7 +1531,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/danielle.jpg'
+								value: 'static/images/avatars/danielle.jpg'
 							},
 							{
 								id: 'name',
@@ -1560,7 +1560,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/carl.jpg'
+								value: 'static/images/avatars/carl.jpg'
 							},
 							{
 								id: 'name',
@@ -1589,7 +1589,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/profile.jpg'
+								value: 'static/images/avatars/profile.jpg'
 							},
 							{
 								id: 'name',
@@ -1618,7 +1618,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/garry.jpg'
+								value: 'static/images/avatars/garry.jpg'
 							},
 							{
 								id: 'name',
@@ -1647,7 +1647,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/james.jpg'
+								value: 'static/images/avatars/james.jpg'
 							},
 							{
 								id: 'name',
@@ -1676,7 +1676,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/alice.jpg'
+								value: 'static/images/avatars/alice.jpg'
 							},
 							{
 								id: 'name',
@@ -1705,7 +1705,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/vincent.jpg'
+								value: 'static/images/avatars/vincent.jpg'
 							},
 							{
 								id: 'name',
@@ -1734,7 +1734,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/carl.jpg'
+								value: 'static/images/avatars/carl.jpg'
 							},
 							{
 								id: 'name',
@@ -1763,7 +1763,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/andrew.jpg'
+								value: 'static/images/avatars/andrew.jpg'
 							},
 							{
 								id: 'name',
@@ -1792,7 +1792,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/danielle.jpg'
+								value: 'static/images/avatars/danielle.jpg'
 							},
 							{
 								id: 'name',
@@ -1821,7 +1821,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/joyce.jpg'
+								value: 'static/images/avatars/joyce.jpg'
 							},
 							{
 								id: 'name',
@@ -1850,7 +1850,7 @@ const projectDashboardAppDB = {
 						cells: [
 							{
 								id: 'avatar',
-								value: 'assets/images/avatars/james.jpg'
+								value: 'static/images/avatars/james.jpg'
 							},
 							{
 								id: 'name',
