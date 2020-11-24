@@ -95,7 +95,7 @@ class JwtService extends FuseUtils.EventEmitter {
 									},
 									customScrollbars: true,
 									theme: {
-										main: 'defaultDark',
+										main: 'mainThemeLight',
 										navbar: 'defaultDark',
 										toolbar: 'defaultDark',
 										footer: 'defaultDark'
