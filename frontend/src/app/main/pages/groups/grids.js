@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-// import Checkbox from "@material-ui/core/Checkbox";
+import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 		margin: 'auto'
 	},
 	paper: {
-		width: 200,
+		width: 400,
 		height: 230,
 		overflow: 'auto'
 	},
@@ -83,14 +83,14 @@ export default function TransferList() {
 
 					return (
 						<ListItem key={value} role="listitem" button onClick={handleToggle(value)}>
-							{/* <ListItemIcon>
-                <Checkbox
-                  checked={checked.indexOf(value) !== -1}
-                  tabIndex={-1}
-                  disableRipple
-                  inputProps={{ "aria-labelledby": labelId }}
-                />
-              </ListItemIcon> */}
+							<ListItemIcon>
+								<Checkbox
+									checked={checked.indexOf(value) !== -1}
+									tabIndex={-1}
+									disableRipple
+									inputProps={{ 'aria-labelledby': labelId }}
+								/>
+							</ListItemIcon>
 							<ListItemText id={labelId} primary={`List item ${value + 1}`} />
 						</ListItem>
 					);
@@ -102,22 +102,19 @@ export default function TransferList() {
 
 	return (
 		<Grid container spacing={2} justify="center" alignItems="center" className={classes.root}>
-			<Grid item>
-				{customList(left)}
-				<Button
-					variant="outlined"
-					size="small"
-					className={classes.button}
-					onClick={handleAllRight}
-					disabled={left.length === 0}
-					aria-label="move all right"
-				>
-					≫
-				</Button>
-			</Grid>
-
+			<Grid item>{customList(left)}</Grid>
 			<Grid item>
 				<Grid container direction="column" alignItems="center">
+					<Button
+						variant="outlined"
+						size="small"
+						className={classes.button}
+						onClick={handleAllRight}
+						disabled={left.length === 0}
+						aria-label="move all right"
+					>
+						≫
+					</Button>
 					<Button
 						variant="outlined"
 						size="small"
@@ -138,21 +135,19 @@ export default function TransferList() {
 					>
 						&lt;
 					</Button>
+					<Button
+						variant="outlined"
+						size="small"
+						className={classes.button}
+						onClick={handleAllLeft}
+						disabled={right.length === 0}
+						aria-label="move all left"
+					>
+						≪
+					</Button>
 				</Grid>
 			</Grid>
-			<Grid item>
-				{customList(right)}
-				<Button
-					variant="outlined"
-					size="small"
-					className={classes.button}
-					onClick={handleAllLeft}
-					disabled={right.length === 0}
-					aria-label="move all left"
-				>
-					≪
-				</Button>
-			</Grid>
+			<Grid item>{customList(right)}</Grid>
 		</Grid>
 	);
 }
