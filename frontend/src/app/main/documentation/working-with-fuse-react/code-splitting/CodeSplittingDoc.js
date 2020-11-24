@@ -67,7 +67,7 @@ function CodeSplittingDoc() {
                                 },
                                 routes  : [
                                     {
-                                        path     : '/apps/dashboards/analytics',
+                                        path     : '/apps/dashboards/project',
                                         component: React.lazy(() => import('./AnalyticsDashboardApp'))
                                     }
                                 ]

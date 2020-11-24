@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const LOGIN_URL = "adm/login/"
+const LOGIN_URL = "adm/token/"
 const ME_URL = "adm/users/me"
 
 // export const headers = {
@@ -17,7 +17,7 @@ export default function login(username, password) {
 export function me(Authorization) {
     return axios.get(process.env.REACT_APP_API_URL + ME_URL,  {
         headers: {
-           Authorization: `Token ${Authorization.token}` ,
+           Authorization: `Bearer ${Authorization.access}` ,
            'Content-Type': 'application/json'
         }
   })

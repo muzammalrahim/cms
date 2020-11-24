@@ -62,6 +62,7 @@ class JwtService extends FuseUtils.EventEmitter {
 	signInWithUsernameAndPassword = (username, password) => {
 		return new Promise((resolve, reject) => {
 			login(username, password).then((response)=>{
+				console.log("token",response.data)
 				me(response.data).then((res)=>{
 					let user= {
 							role: 'admin',

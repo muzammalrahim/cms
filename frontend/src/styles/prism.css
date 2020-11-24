@@ -66,7 +66,7 @@ code[class*="language-"] .token.selector, pre[class*="language-"] .token.selecto
     color: #C792EA;
 }
 
-code[class*="language-"] .token.attr-value, code[class*="language-"] .token.keyword, code[class*="language-"] .token.control, code[class*="language-"] .token.directive, code[class*="language-"] .token.unit, pre[class*="language-"] .token.attr-value, pre[class*="language-"] .token.keyword, pre[class*="language-"] .token.control, pre[class*="language-"] .token.directive, pre[class*="language-"] .token.unit {
+code[class*="language-"] .token.attr-value, code[class*="language-"] .token.keyword, code[class*="language-"] .token.control, code[class*="language-"] .token.directive, code[class*="language-"] .token.unit, pre[class*="language-"] .token.attr-value, pre[class*="language-"] .token.keyword, pre[class*="language-"] ..control, pre[class*="language-"] .token.directive, pre[class*="language-"] .token.unit {
     color: #C3E88D;
 }
 

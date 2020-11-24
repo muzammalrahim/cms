@@ -17,11 +17,10 @@ router = DefaultRouter()
 
 urlpatterns = [
     # path('register/', views.registration, name='register'),
-    # path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     # # path('role/', views.UserRoleView.as_view(), name='user_role'),
-    # path('login', users_view.login),
-    path('login/', views.UserLoginView.as_view(), name='login'),
+    # path('login/', views.UserLoginView.as_view(), name='login'),
 	path('users/<pk>/', views.UserLoginView.as_view(), name='me'),
     # path('user-list/', views.UsersListView.as_view(), name='user-list'),
     # path('user-data/<int:id>', views.UserDetailView.as_view(), name='user-data'),

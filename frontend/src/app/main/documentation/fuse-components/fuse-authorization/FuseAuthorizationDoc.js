@@ -270,7 +270,7 @@ function FuseAuthorizationDoc() {
                                     {
                                         path     : '/',
                                         exact    : true,
-                                        component: () => <Redirect to="/apps/dashboards/analytics"/>
+                                        component: () => <Redirect to="/apps/dashboards/project"/>
                                     },
                                     {
                                         component: () => <Redirect to="/pages/errors/error-404"/>

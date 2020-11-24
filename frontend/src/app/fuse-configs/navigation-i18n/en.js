@@ -1,7 +1,9 @@
 const locale = {
 	APPLICATIONS: 'Applications',
 	DASHBOARDS: 'Dashboards',
+	USERS: 'Users',
 	GROUPS: 'Groups',
+	ROLES: 'Roles',
 	CALENDAR: 'Calendar',
 	ECOMMERCE: 'E-Commerce',
 	ACADEMY: 'Academy',
