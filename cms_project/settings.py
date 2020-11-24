@@ -79,16 +79,16 @@ SITE_URL = 'https://staging.tk:4000'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'frontend/build/static')
+STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'cms_project', 'static'),
+    os.path.join(BASE_DIR, 'frontend/build/static'),
 )
 SITE_ID = 1
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'cms_project', 'frontend'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
