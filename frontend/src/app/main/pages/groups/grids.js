@@ -1,153 +1,66 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
-const useStyles = makeStyles(theme => ({
-	root: {
-		margin: 'auto'
-	},
-	paper: {
-		width: 400,
-		height: 230,
-		overflow: 'auto'
-	},
-	button: {
-		margin: theme.spacing(0.5, 0)
-	}
-}));
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-function not(a, b) {
-	return a.filter(value => b.indexOf(value) === -1);
-}
-
-function intersection(a, b) {
-	return a.filter(value => b.indexOf(value) !== -1);
-}
-
-export default function TransferList() {
-	const classes = useStyles();
-	const [checked, setChecked] = React.useState([]);
-	const [left, setLeft] = React.useState([0, 1, 2, 3]);
-	const [right, setRight] = React.useState([4, 5, 6, 7]);
-
-	const leftChecked = intersection(checked, left);
-	const rightChecked = intersection(checked, right);
-
-	const handleToggle = value => () => {
-		const currentIndex = checked.indexOf(value);
-		const newChecked = [...checked];
-
-		if (currentIndex === -1) {
-			newChecked.push(value);
-		} else {
-			newChecked.splice(currentIndex, 1);
-		}
-
-		setChecked(newChecked);
-	};
-
-	const handleAllRight = () => {
-		setRight(right.concat(left));
-		setLeft([]);
-	};
-
-	const handleCheckedRight = () => {
-		setRight(right.concat(leftChecked));
-		setLeft(not(left, leftChecked));
-		setChecked(not(checked, leftChecked));
-	};
-
-	const handleCheckedLeft = () => {
-		setLeft(left.concat(rightChecked));
-		setRight(not(right, rightChecked));
-		setChecked(not(checked, rightChecked));
-	};
-
-	const handleAllLeft = () => {
-		setLeft(left.concat(right));
-		setRight([]);
-	};
-
-	const customList = items => (
-		<Paper className={classes.paper}>
-			<List dense component="div" role="list">
-				{items.map(value => {
-					const labelId = `transfer-list-item-${value}-label`;
-
-					return (
-						<ListItem key={value} role="listitem" button onClick={handleToggle(value)}>
-							<ListItemIcon>
-								<Checkbox
-									checked={checked.indexOf(value) !== -1}
-									tabIndex={-1}
-									disableRipple
-									inputProps={{ 'aria-labelledby': labelId }}
-								/>
-							</ListItemIcon>
-							<ListItemText id={labelId} primary={`List item ${value + 1}`} />
-						</ListItem>
-					);
-				})}
-				<ListItem />
-			</List>
-		</Paper>
-	);
-
+export default function CheckboxesTags() {
 	return (
-		<Grid container spacing={2} justify="center" alignItems="center" className={classes.root}>
-			<Grid item>{customList(left)}</Grid>
-			<Grid item>
-				<Grid container direction="column" alignItems="center">
-					<Button
-						variant="outlined"
-						size="small"
-						className={classes.button}
-						onClick={handleAllRight}
-						disabled={left.length === 0}
-						aria-label="move all right"
-					>
-						≫
-					</Button>
-					<Button
-						variant="outlined"
-						size="small"
-						className={classes.button}
-						onClick={handleCheckedRight}
-						disabled={leftChecked.length === 0}
-						aria-label="move selected right"
-					>
-						&gt;
-					</Button>
-					<Button
-						variant="outlined"
-						size="small"
-						className={classes.button}
-						onClick={handleCheckedLeft}
-						disabled={rightChecked.length === 0}
-						aria-label="move selected left"
-					>
-						&lt;
-					</Button>
-					<Button
-						variant="outlined"
-						size="small"
-						className={classes.button}
-						onClick={handleAllLeft}
-						disabled={right.length === 0}
-						aria-label="move all left"
-					>
-						≪
-					</Button>
-				</Grid>
-			</Grid>
-			<Grid item>{customList(right)}</Grid>
-		</Grid>
+		<Autocomplete
+			multiple
+			id="checkboxes-tags-demo"
+			options={top100Films}
+			disableCloseOnSelect
+			getOptionLabel={option => option.title}
+			renderOption={(option, { selected }) => (
+				<React.Fragment>
+					<Checkbox icon={icon} checkedIcon={checkedIcon} style={{ marginRight: 8 }} checked={selected} />
+					{option.title}
+				</React.Fragment>
+			)}
+			style={{ width: 500 }}
+			renderInput={params => (
+				<TextField {...params} variant="outlined" label="Permisions" placeholder="Favorites" />
+			)}
+		/>
 	);
 }
+
+// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+const top100Films = [
+	{ title: 'The Shawshank Redemption', year: 1994 },
+	{ title: 'The Godfather', year: 1972 },
+	{ title: 'The Godfather: Part II', year: 1974 },
+	{ title: 'The Dark Knight', year: 2008 },
+	{ title: '12 Angry Men', year: 1957 },
+	{ title: "Schindler's List", year: 1993 },
+	{ title: 'Pulp Fiction', year: 1994 },
+	{ title: 'The Lord of the Rings: The Return of the King', year: 2003 },
+	{ title: 'The Good, the Bad and the Ugly', year: 1966 },
+	{ title: 'Fight Club', year: 1999 },
+	{ title: 'The Lord of the Rings: The Fellowship of the Ring', year: 2001 },
+	{ title: 'Star Wars: Episode V - The Empire Strikes Back', year: 1980 },
+	{ title: 'Forrest Gump', year: 1994 },
+	{ title: 'Inception', year: 2010 },
+	{ title: 'The Lord of the Rings: The Two Towers', year: 2002 },
+	{ title: "One Flew Over the Cuckoo's Nest", year: 1975 },
+	{ title: 'Goodfellas', year: 1990 },
+	{ title: 'The Matrix', year: 1999 },
+	{ title: 'Seven Samurai', year: 1954 },
+	{ title: 'Star Wars: Episode IV - A New Hope', year: 1977 },
+	{ title: 'City of God', year: 2002 },
+	{ title: 'Se7en', year: 1995 },
+	{ title: 'The Silence of the Lambs', year: 1991 },
+	{ title: "It's a Wonderful Life", year: 1946 },
+	{ title: 'Life Is Beautiful', year: 1997 },
+	{ title: 'The Usual Suspects', year: 1995 },
+	{ title: 'Léon: The Professional', year: 1994 },
+	{ title: 'Spirited Away', year: 2001 },
+	{ title: 'Saving Private Ryan', year: 1998 },
+	{ title: 'Once Upon a Time in the West', year: 1968 },
+	{ title: 'American History X', year: 1998 }
+];
