@@ -13,7 +13,8 @@ import GroupsConfigration from 'app/main/pages/groups/GroupsConfigration';
 import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-
+import jwtService from '../../app/services/jwtService';
+// console.log('test result', jwtService.signInWithToken());
 const routeConfigs = [
 	...appsConfigs,
 	...pagesConfigs,
@@ -34,11 +35,11 @@ const routes = [
 	// if you want to make whole app auth protected by default change defaultAuth for example:
 	// ...FuseUtils.generateRoutesFromConfigs(routeConfigs, ['admin','staff','user']),
 	// The individual route configs which has auth option won't be overridden.
-	...FuseUtils.generateRoutesFromConfigs(routeConfigs, null),
+	...FuseUtils.generateRoutesFromConfigs(routeConfigs, ['admin']),
 	{
 		path: '/',
 		exact: true,
-		component: () => <Redirect to="/apps/dashboards/project" />
+		component: () => <Redirect to="/apps/dashboards/project"/>
 	},
 	{
 		component: () => <Redirect to="/pages/errors/error-404" />
