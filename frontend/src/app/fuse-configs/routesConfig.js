@@ -9,7 +9,7 @@ import pagesConfigs from 'app/main/pages/pagesConfigs';
 import RegisterConfig from 'app/main/register/RegisterConfig';
 import UsersConfigration from 'app/main/pages/users/UsersConfigration';
 import GroupsConfigration from 'app/main/pages/groups/GroupsConfigration';
-import RolesConfigration from 'app/main/pages/roles/RolesConfigration';
+// import RolesConfigration from 'app/main/pages/roles/RolesConfigration';
 import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
@@ -27,7 +27,7 @@ const routeConfigs = [
 	CallbackConfig,
 	UsersConfigration,
 	GroupsConfigration,
-	RolesConfigration,
+	// RolesConfigration,
 ];
 
 const routes = [
