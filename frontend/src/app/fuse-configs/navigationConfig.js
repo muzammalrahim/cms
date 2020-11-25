@@ -92,29 +92,29 @@ const navigationConfig = [
 					}
 				]
 			},
-			{
-				id: 'roles',
-				title: 'Roles',
-				translate: 'ROLES',
-				type: 'collapse',
-				icon: 'bubble_chart',
-				children: [
-					{
-						id: 'role_add',
-						title: 'Add',
-						type: 'item',
-						exact: true,
-						url: '/admin/auth/role/add'
-					},
-					{
-						id: 'role_list',
-						title: 'List',
-						type: 'item',
-						exact: true,
-						url: '/admin/auth/role'
-					}
-				]
-			},
+			// {
+			// 	id: 'roles',
+			// 	title: 'Roles',
+			// 	translate: 'ROLES',
+			// 	type: 'collapse',
+			// 	icon: 'bubble_chart',
+			// 	children: [
+			// 		{
+			// 			id: 'role_add',
+			// 			title: 'Add',
+			// 			type: 'item',
+			// 			exact: true,
+			// 			url: '/admin/auth/role/add'
+			// 		},
+			// 		{
+			// 			id: 'role_list',
+			// 			title: 'List',
+			// 			type: 'item',
+			// 			exact: true,
+			// 			url: '/admin/auth/role'
+			// 		}
+			// 	]
+			// },
 			// {
 			// 	id: 'calendar',
 			// 	title: 'Calendar',
