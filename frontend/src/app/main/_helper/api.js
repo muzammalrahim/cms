@@ -1,9 +1,6 @@
 import axios from 'axios';
-import jwtService from '../../services/jwtService';
 
-
-export const API_URL = "http://localhost:8000/";
-// export const API_URL = process.env.NEXT_PUBLIC_API_URL + 'api/';
+export const API_URL = process.env.REACT_APP_API_URL;
 
 export const headers = {
   'Content-Type': 'application/json',

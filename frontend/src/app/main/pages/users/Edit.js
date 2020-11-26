@@ -2,7 +2,7 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { makeStyles } from '@material-ui/core/styles';
 import { TextField, Button, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import React from 'react';
-import Buttons from './Buttons'
+// import Buttons from './Buttons'
 import Grid from '../groups/grids'
 
 const useStyles = makeStyles({
@@ -89,7 +89,7 @@ function Edit() {
 						<h5>Date:</h5>
 						<h5>Time:</h5>
 						<hr />
-						<Buttons />
+						{/* <Buttons /> */}
 					</form>
 				</div>
 			}
