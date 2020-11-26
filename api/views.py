@@ -21,6 +21,7 @@ from rest_framework.request import Request
 @require_http_methods(["POST"])
 @csrf_exempt
 def registration(request):
+	print('this is called ')
 	form = UserForm(request.POST)
 	if form.is_valid():
 		user = form.save()

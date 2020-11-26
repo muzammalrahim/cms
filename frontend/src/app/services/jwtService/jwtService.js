@@ -6,7 +6,7 @@ import login, {me} from '../../helper/api';
 
 class JwtService extends FuseUtils.EventEmitter {
 	init() {
-		this.setInterceptors();
+		// this.setInterceptors();
 		this.handleAuthentication();
 	}
 
@@ -64,7 +64,6 @@ class JwtService extends FuseUtils.EventEmitter {
 		return new Promise((resolve, reject) => {
 			login(username, password).then((response)=>{
 				this.setSession(response.data.access);
-				console.log("token",response.data)
 				me(response.data).then((res)=>{
 					let user= {
 							role: 'admin',
@@ -196,7 +195,7 @@ class JwtService extends FuseUtils.EventEmitter {
 	};
 
 	logout = () => {
-		// this.setSession(null);
+		this.setSession(null);
 	};
 
 	isAuthTokenValid = access_token => {
