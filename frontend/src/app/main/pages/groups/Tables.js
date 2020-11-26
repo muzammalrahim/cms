@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import { useHistory } from 'react-router-dom'
 
 const columns = [
 	{ id: 'name', label: 'Groups', minWidth: 170 },
@@ -60,6 +61,10 @@ export default function StickyHeadTable() {
 		setPage(0);
 	};
 
+	const handleEdit = (props)=>{
+		props.history.push('/admin/auth/group/Edit')
+	}
+
 	return (
 		<Paper className={classes.root}>
 			<TableContainer className={classes.container}>
@@ -67,7 +72,7 @@ export default function StickyHeadTable() {
 					<TableHead>
 						<TableRow>
 							{columns.map(column => (
-								<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+								<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }} onClick={handleEdit}>
 									{column.label}
 								</TableCell>
 							))}

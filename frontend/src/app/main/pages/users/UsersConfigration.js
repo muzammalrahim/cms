@@ -15,6 +15,11 @@ const UsersConfigration = {
 			path: '/admin/auth/user',
 			exact: true,
 			component: React.lazy(() => import('./List'))
+		},
+		{
+			path: '/admin/auth/user/edit',
+			exact: true,
+			component: React.lazy(() => import('./Edit'))
 		}
 		
 	]
