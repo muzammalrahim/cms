@@ -1,3 +1,4 @@
+import React from 'react';
 import FuseHighlight from '@fuse/core/FuseHighlight';
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import Icon from '@material-ui/core/Icon';
@@ -8,7 +9,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
+import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 /* eslint import/no-webpack-loader-syntax: off */
 
@@ -270,7 +271,7 @@ function FuseAuthorizationDoc() {
                                     {
                                         path     : '/',
                                         exact    : true,
-                                        component: () => <Redirect to="/apps/dashboards/project"/>
+                                        component: () => <Redirect to="/${REACT_BASE_URL}"/>
                                     },
                                     {
                                         component: () => <Redirect to="/pages/errors/error-404"/>

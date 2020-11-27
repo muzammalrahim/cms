@@ -1,7 +1,8 @@
+import React from 'react';
 import FuseAnimate from '@fuse/core/FuseAnimate';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
 import { Link } from 'react-router-dom';
+import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 function Error500Page() {
 	return (
@@ -25,7 +26,7 @@ function Error500Page() {
 					</Typography>
 				</FuseAnimate>
 
-				<Link className="font-medium" to="/apps/dashboards/project">
+				<Link className="font-medium" to={`/${REACT_BASE_URL}`}>
 					Report this problem
 				</Link>
 			</div>

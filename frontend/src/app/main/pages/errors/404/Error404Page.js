@@ -1,10 +1,11 @@
+import React from 'react';
 import FuseAnimate from '@fuse/core/FuseAnimate';
 import Icon from '@material-ui/core/Icon';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
 import { Link } from 'react-router-dom';
+import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 function Error404Page() {
 	return (
@@ -35,7 +36,7 @@ function Error404Page() {
 					/>
 				</Paper>
 
-				<Link className="font-medium" to="/apps/dashboards/project">
+				<Link className="font-medium" to={`/${REACT_BASE_URL}`}>
 					Go back to dashboard
 				</Link>
 			</div>
