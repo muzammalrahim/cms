@@ -6,7 +6,7 @@ import { TextField, Button, Grid, Checkbox } from '@material-ui/core'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import Grids from './grids'
-import { post } from '../../_helper/api'
+import {post} from '../../../helper/api';
 
 const styles = (theme) => ({
 	root: {

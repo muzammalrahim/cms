@@ -3,7 +3,7 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import list from '../../_helper/api';
+import {list} from '../../../helper/api';
 
 
 const styles = theme => ({
