@@ -24,7 +24,7 @@ export default function CheckboxesTags() {
 			)}
 			style={{ width: 500 }}
 			renderInput={params => (
-				<TextField {...params} variant="outlined" label="Permisions"  />
+				<TextField {...params} variant="outlined" label="Permisions" helperText="Hold down “Control”, or “Command” on a Mac, to select more than one." />
 			)}
 		/>
 	);
