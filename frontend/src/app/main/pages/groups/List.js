@@ -1,10 +1,12 @@
+import React, {Component} from 'react';
 import FusePageCarded from '@fuse/core/FusePageCarded';
-import { makeStyles, fade } from '@material-ui/core/styles';
-import { Button, InputBase } from '@material-ui/core';
-import React from 'react';
-import Tables from './Tables'
+import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper } from '@material-ui/core';
+import { fade, withStyles } from '@material-ui/core/styles';
+import {connect} from 'react-redux';
+import {list} from '../../../helper/api';
 
-const useStyles = makeStyles(theme => ({
+
+const styles = theme => ({
 	layoutRoot: {},
 	inputRoot: {
 		color: 'inherit'
@@ -18,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	searchIcon: {
-		padding: theme.spacing(0, 2),
+		padding: theme.spacing(1),
 		height: '100%',
 		position: 'absolute',
 		pointerEvents: 'none',
@@ -37,45 +39,124 @@ const useStyles = makeStyles(theme => ({
 			width: '20ch'
 		}
 	}
-}));
+});
 
-function List() {
-	const classes = useStyles();
+class List extends Component {
+	constructor(props){
+		super(props);
+		this.state={
+			groupList:[],
+			page:0,
+			rowsPerPage:25,
+			columns : [
+				{ id: 'group', label: 'GroupName', minWidth: 170 },
+			],
+			rows: []
+		}
+		this.getGroups();
+	}
+	getGroups(){
+		list('adm/auth/group/').then((response)=>{
+			this.setState({groupList:response.data})
+			let rows = [];
+			response.data.map((row)=>{
+				rows.push(this.createData(row.GroupName))
+			})
+		this.setState({rows});
+		})
+	}
 
-	return (
-		<FusePageCarded
-			classes={{
-				root: classes.layoutRoot
-			}}
-			header={
-				<div className="py-24">
-					<h4>Groups</h4>
-				</div>
-			}
-			contentToolbar={
-				<div className="px-24">
-					<span>Groups List</span>
-					<InputBase
-            placeholder="Search…"
-            color='primary'
-						classes={{
-							root: classes.inputRoot,
-							input: classes.inputInput
-						}}
-						inputProps={{ 'aria-label': 'search' }}
-					/>
-					<Button variant="contained" color="primary" raised justifyContent="flex-end">
-						Add Group
-					</Button>
-				</div>
-			}
-			content={
-				<div className="p-24">
-					<Tables />
-				</div>
-			}
-		/>
-	);
+	handleChangePage = (event, newPage) => {
+		this.setState({page:newPage});
+	};
+
+	handleChangeRowsPerPage = event => {
+		this.setState({rowsPerPage:event.target.value});
+		this.setState({page:0});
+	};
+	createData(name) {
+		return { name};
+	}
+	render(){
+		const { classes } = this.props;
+		let {groupList, rowsPerPage, page, rows, columns} = this.state;
+		return (
+			<FusePageCarded
+				classes={{
+					root: classes.layoutRoot
+				}}
+				header={
+					<div className="py-24">
+						<h4>Group</h4>
+					</div>
+				}
+				contentToolbar={
+					<div className="px-24">
+						<span>Group List</span>
+						<InputBase
+							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px' }}
+							placeholder="Search…"
+							variant="outlined"
+							classes={{
+								root: classes.inputRoot,
+								input: classes.inputInput
+							}}
+							inputProps={{ 'aria-label': 'search' }}
+						/>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/group/add')}}>
+							Add Group
+						</Button>
+					</div>
+				}
+				content={
+					<div className="p-24">
+						<Paper className={classes.root}>
+							<TableContainer className={classes.container}>
+								<Table stickyHeader aria-label="sticky table">
+									<TableHead>
+										<TableRow>
+											{columns.map(column => (
+												<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+													{column.label}
+												</TableCell>
+											))}
+										</TableRow>
+									</TableHead>
+									<TableBody>
+										{rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => {
+											return (
+												<TableRow hover role="checkbox" tabIndex={-1} key={row.email}>
+													{columns.map(column => {
+														const value = row[column.id];
+														return (
+															<TableCell key={column.id} align={column.align}>
+																{column.format && typeof value === 'number'
+																	? column.format(value)
+																	: value}
+															</TableCell>
+														);
+													})}
+												</TableRow>
+											);
+										})}
+									</TableBody>
+								</Table>
+							</TableContainer>
+							<TablePagination
+								rowsPerPageOptions={[10, 25, 50, 100]}
+								component="div"
+								count={rows.length}
+								rowsPerPage={rowsPerPage}
+								page={page}
+								onChangePage={()=>{this.handleChangePage()}}
+								onChangeRowsPerPage={()=>{this.handleChangeRowsPerPage()}}
+							/>
+						</Paper>
+					</div>
+				}
+			/>
+		);
+	}
 }
 
-export default List;
+export default connect(null, null)(withStyles(styles)(List))

@@ -3,7 +3,9 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import list from '../../_helper/api';
+import {list} from '../../../helper/api';
+import {REACT_BASE_URL} from '../../../helper/static_data';
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 const styles = theme => ({
@@ -49,7 +51,8 @@ class List extends Component {
 			page:0,
 			rowsPerPage:25,
 			columns : [
-				{ id: 'name', label: 'UserName', minWidth: 170 },
+				{ id: 'id', label: '', minWidth: 5},
+				{ id: 'name', label: 'UserName', minWidth: 170},
 				{ id: 'email', label: 'Email', minWidth: 100 },
 				{
 					id: 'first_name',
@@ -82,7 +85,13 @@ class List extends Component {
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
+				let id = <Checkbox
+				// indeterminate={numSelected > 0 && numSelected < rowCount}
+				// checked={rowCount > 0 && numSelected === rowCount}
+				// onChange={onSelectAllClick}
+				inputProps={{ 'aria-label': 'select all desserts' }}
+			  />
+				rows.push(this.createData(id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
 			})
 		this.setState({rows});
 		})
@@ -96,8 +105,8 @@ class List extends Component {
 		this.setState({rowsPerPage:event.target.value});
 		this.setState({page:0});
 	};
-	createData(name, email, first_name, last_name, is_staff) {
-		return { name, email, first_name, last_name, is_staff };
+	createData(id,name, email, first_name, last_name, is_staff) {
+		return {id, name, email, first_name, last_name, is_staff };
 	}
 	render(){
 		const { classes } = this.props;
