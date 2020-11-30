@@ -1,5 +1,4 @@
 import React from 'react';
-import {REACT_BASE_URL} from '../../../helper/static_data';
 
 const UsersConfigration = {
 	settings: {
@@ -9,16 +8,16 @@ const UsersConfigration = {
 	},
 	routes: [
 		{
-			path: `/${REACT_BASE_URL}/auth/user/add`,
+			path: '/admin/auth/user/add',
 			component: React.lazy(() => import('./Add'))
 		},
 		{
-			path: `/${REACT_BASE_URL}/auth/user`,
+			path: '/admin/auth/user',
 			exact: true,
 			component: React.lazy(() => import('./List'))
 		},
 		{
-			path: `/${REACT_BASE_URL}/auth/user/:id`,
+			path: '/admin/auth/user/edit',
 			exact: true,
 			component: React.lazy(() => import('./Edit'))
 		}

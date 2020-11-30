@@ -1,5 +1,4 @@
 import React from 'react';
-import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 const ProjectDashboardAppConfig = {
 	settings: {
@@ -9,8 +8,7 @@ const ProjectDashboardAppConfig = {
 	},
 	routes: [
 		{
-			path: `/${REACT_BASE_URL}`,
-			exact: true,
+			path: '/apps/dashboards/project',
 			component: React.lazy(() => import('./ProjectDashboardApp'))
 		}
 	]

@@ -1,5 +1,4 @@
 import React from 'react';
-import {REACT_BASE_URL} from '../../../helper/static_data';
 
 const GroupsConfigration = {
 	settings: {
@@ -9,16 +8,16 @@ const GroupsConfigration = {
 	},
 	routes: [
 		{
-			path: `/${REACT_BASE_URL}/auth/group/add`,
+			path: '/admin/auth/group/add',
 			component: React.lazy(() => import('./Add'))
 		},
 		{
-			path: `/${REACT_BASE_URL}/auth/group`,
+			path: '/admin/auth/group',
 			exact: true,
 			component: React.lazy(() => import('./List'))
 		},
 		{
-			path: `/${REACT_BASE_URL}/auth/group/edit`,
+			path: '/admin/auth/group/edit',
 			exact: true,
 			component: React.lazy(() => import('./Edit'))
 		}

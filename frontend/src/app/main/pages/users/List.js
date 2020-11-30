@@ -134,7 +134,7 @@ class List extends Component {
 							}}
 							inputProps={{ 'aria-label': 'search' }}
 						/>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/add`)}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/user/add')}}>
 							Add User
 						</Button>
 					</div>
@@ -146,11 +146,11 @@ class List extends Component {
 								<Table stickyHeader aria-label="sticky table">
 									<TableHead>
 										<TableRow>
-											{columns.map(column => {
-												return <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }} >
+											{columns.map(column => (
+												<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
 													{column.label}
 												</TableCell>
-											})}
+											))}
 										</TableRow>
 									</TableHead>
 									<TableBody>
@@ -160,7 +160,7 @@ class List extends Component {
 													{columns.map(column => {
 														const value = row[column.id];
 														return (
-															<TableCell key={column.id} align={column.align} style={{color:column.id === "name" && 'blue', cursor:column.id === "name" && 'pointer'}} onClick={()=>{column.id === "name" && this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}>
+															<TableCell key={column.id} align={column.align}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}

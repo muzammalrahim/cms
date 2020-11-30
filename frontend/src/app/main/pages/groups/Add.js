@@ -21,7 +21,7 @@ const styles = (theme) => ({
 		},
 	  },
 });
-  
+
 
 class Add extends Component{
 	constructor(props){
@@ -108,15 +108,15 @@ class Add extends Component{
 							<form id="edit_user" autoComplete="off">
 								<Grid container spacing={3}>
 									<Grid item xs={12} sm={12}>
-										<TextField 
-											id="name" 
-											label="Name" 
+										<TextField
+											id="name"
+											label="Name"
 											value={name}
 											onChange={(e)=>{this.changeHandler(e)}}
-											variant="outlined" 
-											fullWidth 
+											variant="outlined"
+											fullWidth
 										/>
-									</Grid>									
+									</Grid>
 									<Grid item xs={12} sm={12}>
 										<h2>PERMISSIONS</h2>
 										<hr/><br/>
@@ -130,11 +130,11 @@ class Add extends Component{
 											getOptionLabel={option => option.name}
 											renderOption={(option) => (
 												<React.Fragment>
-													<Checkbox 
-														icon={icon} 
-														checkedIcon={checkedIcon} 
-														style={{ marginRight: 8 }} 
-														checked={permissions && permissions.includes(option.id)} 
+													<Checkbox
+														icon={icon}
+														checkedIcon={checkedIcon}
+														style={{ marginRight: 8 }}
+														checked={permissions && permissions.includes(option.id)}
 													/>
 													{option.name}
 												</React.Fragment>
