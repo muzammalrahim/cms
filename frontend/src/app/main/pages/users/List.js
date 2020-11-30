@@ -5,6 +5,7 @@ import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import {list} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 const styles = theme => ({
@@ -50,7 +51,7 @@ class List extends Component {
 			page:0,
 			rowsPerPage:25,
 			columns : [
-				{ id: 'id', label: 'ID', minWidth: 170},
+				{ id: 'id', label: '', minWidth: 5},
 				{ id: 'name', label: 'UserName', minWidth: 170},
 				{ id: 'email', label: 'Email', minWidth: 100 },
 				{
@@ -84,7 +85,13 @@ class List extends Component {
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
+				let id = <Checkbox
+				// indeterminate={numSelected > 0 && numSelected < rowCount}
+				// checked={rowCount > 0 && numSelected === rowCount}
+				// onChange={onSelectAllClick}
+				inputProps={{ 'aria-label': 'select all desserts' }}
+			  />
+				rows.push(this.createData(id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
 			})
 		this.setState({rows});
 		})
