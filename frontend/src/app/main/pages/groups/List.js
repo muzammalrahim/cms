@@ -4,6 +4,8 @@ import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHe
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import {list} from '../../../helper/api';
+import {REACT_BASE_URL} from '../../../helper/static_data';
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 const styles = theme => ({
@@ -49,7 +51,8 @@ class List extends Component {
 			page:0,
 			rowsPerPage:25,
 			columns : [
-				{ id: 'group', label: 'GroupName', minWidth: 170 },
+				{ id: 'id', label: ''},
+				{ id: 'name', label: 'Group Name'},
 			],
 			rows: []
 		}
@@ -60,7 +63,13 @@ class List extends Component {
 			this.setState({groupList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.GroupName))
+				let id = <Checkbox
+				// indeterminate={numSelected > 0 && numSelected < rowCount}
+				// checked={rowCount > 0 && numSelected === rowCount}
+				// onChange={onSelectAllClick}
+				inputProps={{ 'aria-label': 'select all desserts' }}
+			  />
+				rows.push(this.createData(row.id, row.name))
 			})
 		this.setState({rows});
 		})
@@ -74,8 +83,8 @@ class List extends Component {
 		this.setState({rowsPerPage:event.target.value});
 		this.setState({page:0});
 	};
-	createData(name) {
-		return { name};
+	createData(id,name) {
+		return {id, name};
 	}
 	render(){
 		const { classes } = this.props;
@@ -87,12 +96,12 @@ class List extends Component {
 				}}
 				header={
 					<div className="py-24">
-						<h4>Group</h4>
+						<h4>Groups</h4>
 					</div>
 				}
 				contentToolbar={
 					<div className="px-24">
-						<span>Group List</span>
+						<span>Groups List</span>
 						<InputBase
 							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px' }}
 							placeholder="Search…"
@@ -103,7 +112,7 @@ class List extends Component {
 							}}
 							inputProps={{ 'aria-label': 'search' }}
 						/>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/group/add')}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/add`)}}>
 							Add Group
 						</Button>
 					</div>
@@ -115,11 +124,11 @@ class List extends Component {
 								<Table stickyHeader aria-label="sticky table">
 									<TableHead>
 										<TableRow>
-											{columns.map(column => (
-												<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+											{columns.map(column => {
+												return <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }} >
 													{column.label}
 												</TableCell>
-											))}
+											})}
 										</TableRow>
 									</TableHead>
 									<TableBody>
@@ -129,7 +138,7 @@ class List extends Component {
 													{columns.map(column => {
 														const value = row[column.id];
 														return (
-															<TableCell key={column.id} align={column.align}>
+															<TableCell key={column.id} align={column.align} style={{color:column.id === "name" && 'blue', cursor:column.id === "name" && 'pointer'}} onClick={()=>{column.id === "name" && this.props.history.push(`/${REACT_BASE_URL}/auth/group/${row.id}`)}}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}

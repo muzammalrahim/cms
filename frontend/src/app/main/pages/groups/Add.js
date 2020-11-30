@@ -88,18 +88,18 @@ class Add extends Component{
 				}}
 				header={
 					<div className="py-24">
-						<h1>Users</h1>
+						<h1>Groups</h1>
 					</div>
 				}
 				contentToolbar={
 					<div className="px-24">
-						<span>Edit User</span>
-						<Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}}>
+						<span>Add Group</span>
+						{/* <Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}}>
 							History
 						</Button>
 						<Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}}>
 							Delete User
-						</Button>
+						</Button> */}
 					</div>
 				}
 				content={

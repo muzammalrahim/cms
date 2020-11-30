@@ -91,7 +91,7 @@ class List extends Component {
 				// onChange={onSelectAllClick}
 				inputProps={{ 'aria-label': 'select all desserts' }}
 			  />
-				rows.push(this.createData(id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
+				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
 			})
 		this.setState({rows});
 		})

@@ -169,7 +169,7 @@ class Edit extends Component{
 				content={
 					<Container fixed>
 						<div className="p-24">
-							<form id="edit_user" className={classes.root} autoComplete="off">
+							<form id="edit_user" autoComplete="off">
 								<Grid container spacing={3}>
 									<Grid item xs={12} sm={6}>
 										<TextField 
@@ -341,7 +341,7 @@ class Edit extends Component{
 										<TextField id="outlined-basic" label="Joined Time" variant="outlined" fullWidth />
 									</Grid>
 								</Grid>
-								<div className={classes.root}>
+								<div className={classes.root} style={{textAlign:'right'}}>
 									<Button variant="contained" onClick={()=>{this.handleSubmit("save_and_new")}}>
 										Save and add another
 									</Button>

@@ -18,7 +18,7 @@ const GroupsConfigration = {
 			component: React.lazy(() => import('./List'))
 		},
 		{
-			path: `/${REACT_BASE_URL}/auth/group/edit`,
+			path: `/${REACT_BASE_URL}/auth/group/:id`,
 			exact: true,
 			component: React.lazy(() => import('./Edit'))
 		}

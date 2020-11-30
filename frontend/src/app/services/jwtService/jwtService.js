@@ -1,7 +1,8 @@
 import FuseUtils from '@fuse/utils/FuseUtils';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
-import login, {me} from '../../helper/api';
+import login, {me}  from '../../helper/api';
+import {REACT_BASE_URL} from '../../helper/static_data'
 /* eslint-disable camelcase */
 
 class JwtService extends FuseUtils.EventEmitter {
@@ -109,6 +110,8 @@ class JwtService extends FuseUtils.EventEmitter {
 					} else {
 						reject(res.data.error);
 					}
+
+					window.location.assign(`/${REACT_BASE_URL}`)
 				})
 				
 			});
@@ -184,6 +187,7 @@ class JwtService extends FuseUtils.EventEmitter {
 	};
 
 	setSession = access_token => {
+		console.log('setSession')
 		if (access_token) {
 			localStorage.setItem('jwt_access_token', access_token);
 			axios.defaults.headers.common.Authorization = `Bearer ${access_token}`;
