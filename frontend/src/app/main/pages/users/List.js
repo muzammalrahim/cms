@@ -3,12 +3,14 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import {list} from '../../../helper/api';
+import {list, del} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
 import  CloseIcon  from '@material-ui/icons/Close';
 import  CheckIcon from '@material-ui/icons/Check';
 import  SearchIcon from '@material-ui/icons/Search';
+import  DeleteIcon from '@material-ui/icons/Delete';
+import  EditIcon from '@material-ui/icons/Edit';
 import { green } from '@material-ui/core/colors';
 
 
@@ -84,6 +86,7 @@ class List extends Component {
 					label: 'Actions',
 					minWidth: 170,
 					align: 'right',
+					actions: <CloseIcon />
 					// format: value => value.toLocaleString('en-US')
 				}
 			],
@@ -92,13 +95,22 @@ class List extends Component {
 		}
 		this.getUsers();
 	}
+
+	
+	handleDelete(id){
+		del(`adm/auth/user/${id}/`).then((response)=>{
+				this.props.history.push(`/${REACT_BASE_URL}/auth/user`)
+				this.getUsers();
+		})
+	}
+
 	getUsers(){
 		let {params} = this.state;
 		list('adm/auth/user/', params).then((response)=>{
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />, row.actions))
+				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />, [<EditIcon color='primary'  style={{cursor:"pointer"}} onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}/>,<DeleteIcon style={{cursor:"pointer"}} onClick={()=>this.handleDelete(row.id)} color='secondary'/>]))
 			})
 		this.setState({rows});
 		})
@@ -112,8 +124,8 @@ class List extends Component {
 		this.setState({rowsPerPage:event.target.value});
 		this.setState({page:0});
 	};
-	createData(id,name, email, first_name, last_name, is_staff) {
-		return {id, name, email, first_name, last_name, is_staff };
+	createData(id,name, email, first_name, last_name, is_staff, actions) {
+		return {id, name, email, first_name, last_name, is_staff, actions };
 	}
 	render(){
 		const { classes } = this.props;

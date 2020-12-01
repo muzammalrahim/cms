@@ -3,10 +3,12 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import {list} from '../../../helper/api';
+import {list, del} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
 import  SearchIcon from '@material-ui/icons/Search';
+import  DeleteIcon from '@material-ui/icons/Delete';
+import  EditIcon from '@material-ui/icons/Edit';
 
 
 
@@ -55,11 +57,24 @@ class List extends Component {
 			columns : [
 				{ id: 'id', label: ''},
 				{ id: 'name', label: 'Group Name'},
+				{
+					id: 'actions',
+					label: 'Actions',
+					minWidth: 170,
+					align: 'right',
+					// format: value => value.toLocaleString('en-US')
+				}
 			],
 			rows: [],
 			params:{search:''}
 		}
 		this.getGroups();
+	}
+	handleDelete(id){
+		del(`adm/auth/group/${id}/`).then((response)=>{
+				this.props.history.push(`/${REACT_BASE_URL}/auth/group`)
+				this.getGroups();
+		})
 	}
 	getGroups(){
 		let { params } = this.state
@@ -73,7 +88,7 @@ class List extends Component {
 				// onChange={onSelectAllClick}
 				inputProps={{ 'aria-label': 'select all desserts' }}
 			  />
-				rows.push(this.createData(row.id, row.name))
+				rows.push(this.createData(row.id, row.name, [<EditIcon color='primary'  style={{cursor:"pointer"}} onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/${row.id}`)}}/>,<DeleteIcon style={{cursor:"pointer"}} onClick={()=>this.handleDelete(row.id)} color='secondary'/>]))
 			})
 		this.setState({rows});
 		})
@@ -87,8 +102,8 @@ class List extends Component {
 		this.setState({rowsPerPage:+event.target.value});
 		this.setState({page:this.state.page});
 	};
-	createData(id,name) {
-		return {id, name};
+	createData(id,name, actions) {
+		return {id, name, actions};
 	}
 	render(){
 		const { classes } = this.props;
