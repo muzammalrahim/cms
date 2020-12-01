@@ -56,12 +56,14 @@ class List extends Component {
 				{ id: 'id', label: ''},
 				{ id: 'name', label: 'Group Name'},
 			],
-			rows: []
+			rows: [],
+			params:{search:''}
 		}
 		this.getGroups();
 	}
 	getGroups(){
-		list('adm/auth/group/').then((response)=>{
+		let { params } = this.state
+		list('adm/auth/group/', params).then((response)=>{
 			this.setState({groupList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
@@ -82,15 +84,15 @@ class List extends Component {
 	};
 
 	handleChangeRowsPerPage = event => {
-		this.setState({rowsPerPage:event.target.value});
-		this.setState({page:0});
+		this.setState({rowsPerPage:+event.target.value});
+		this.setState({page:this.state.page});
 	};
 	createData(id,name) {
 		return {id, name};
 	}
 	render(){
 		const { classes } = this.props;
-		let {groupList, rowsPerPage, page, rows, columns} = this.state;
+		let { params:{search}, rowsPerPage, page, rows, columns} = this.state;
 		return (
 			<FusePageCarded
 				classes={{
@@ -111,11 +113,19 @@ class List extends Component {
 								root: classes.inputRoot,
 								input: classes.inputInput
 							}}
+							value={search}
+							onChange={(e)=>{
+								let params = {search:e.target.value};
+								this.setState({params});
+								if(!e.target.value){
+									this.getGroups()
+								}
+							}}
 							placeholder="Search Groups"
 							inputProps={{ 'aria-label': 'search groups' }}
 						/>
 						<IconButton type="submit" className={classes.iconButton} aria-label="search">
-							<SearchIcon />
+							<SearchIcon onClick={()=>{this.getGroups()}}/>
 						</IconButton>
 						<span style={{float:'right', marginTop:'30px'}}>
 						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/add`)}}>
@@ -167,8 +177,8 @@ class List extends Component {
 								count={rows.length}
 								rowsPerPage={rowsPerPage}
 								page={page}
-								onChangePage={()=>{this.handleChangePage()}}
-								onChangeRowsPerPage={()=>{this.handleChangeRowsPerPage()}}
+								onChangePage={this.handleChangePage}
+								onChangeRowsPerPage={this.handleChangeRowsPerPage}
 							/>
 						</Paper>
 					</div>

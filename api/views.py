@@ -191,8 +191,9 @@ class ContactUsQueryDetailView(APIView):
 class UserApiAdmin(RestFulModelAdmin):  
     filter_backends = [filters.SearchFilter]
     search_fields = ['username','email', 'first_name', 'last_name']
-
+    permission_classes = []
 @api_admin.register(Group)  
 class GroupApiAdmin(RestFulModelAdmin):  
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['name']
+	filter_backends = [filters.SearchFilter]
+	search_fields = ['name']
+	permission_classes = []

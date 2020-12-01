@@ -78,6 +78,13 @@ class List extends Component {
 					minWidth: 170,
 					align: 'right',
 					// format: value => value.toLocaleString('en-US')
+				},
+				{
+					id: 'actions',
+					label: 'Actions',
+					minWidth: 170,
+					align: 'right',
+					// format: value => value.toLocaleString('en-US')
 				}
 			],
 			rows: [],
@@ -91,7 +98,7 @@ class List extends Component {
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />))
+				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />, row.actions))
 			})
 		this.setState({rows});
 		})
@@ -176,7 +183,7 @@ class List extends Component {
 													{columns.map((column, index) => {
 														const value = row[column.id];
 														return (
-															<TableCell key={index} align={column.align}>
+															<TableCell key={index} align={column.align} style={{color:column.id === "name" && 'blue', cursor:column.id === "name" && 'pointer'}} onClick={()=>{column.id === "name" && this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}
@@ -195,8 +202,8 @@ class List extends Component {
 								count={rows.length}
 								rowsPerPage={rowsPerPage}
 								page={page}
-								onChangePage={()=>{this.handleChangePage()}}
-								onChangeRowsPerPage={()=>{this.handleChangeRowsPerPage()}}
+								onChangePage={this.handleChangePage}
+								onChangeRowsPerPage={this.handleChangeRowsPerPage}
 							/>
 						</Paper>
 					</div>
