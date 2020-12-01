@@ -5,6 +5,7 @@ import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 /* eslint import/no-webpack-loader-syntax: off */
 
@@ -150,7 +151,7 @@ function ReactChartJs2Doc() {
 
 					<ul>
 						<li className="mb-8">
-							<Link to="/apps/dashboards/analytics">Analytics Dashboard</Link>
+							<Link to={`/${REACT_BASE_URL}`}>Analytics Dashboard</Link>
 						</li>
 					</ul>
 				</div>

@@ -13,7 +13,7 @@ import GroupsConfigration from 'app/main/pages/groups/GroupsConfigration';
 import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-
+import {REACT_BASE_URL} from '../helper/static_data'
 const routeConfigs = [
 	...appsConfigs,
 	...pagesConfigs,
@@ -36,9 +36,9 @@ const routes = [
 	// The individual route configs which has auth option won't be overridden.
 	...FuseUtils.generateRoutesFromConfigs(routeConfigs, ['admin']),
 	{
-		path: '/',
+		path: `/${REACT_BASE_URL}`,
 		exact: true,
-		component: () => <Redirect to="/apps/dashboards/project" />
+		component: () => <Redirect to={`/${REACT_BASE_URL}`} />
 	},
 	{
 		component: () => <Redirect to="/pages/errors/error-404" />

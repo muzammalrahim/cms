@@ -1,4 +1,5 @@
 import React from 'react';
+import {REACT_BASE_URL} from '../../../../helper/static_data'
 
 const AnalyticsDashboardAppConfig = {
 	settings: {
@@ -8,7 +9,8 @@ const AnalyticsDashboardAppConfig = {
 	},
 	routes: [
 		{
-			path: '/apps/dashboards/analytics',
+			path: `/${REACT_BASE_URL}`,
+			exact: true,
 			component: React.lazy(() => import('./AnalyticsDashboardApp'))
 		}
 	]
