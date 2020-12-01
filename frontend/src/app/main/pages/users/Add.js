@@ -3,7 +3,7 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, Grid, TextField } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles';
 import {connect} from 'react-redux';
-import {post} from '../../_helper/api';
+import {post} from '../../../helper/api';
 
 const styles = (theme) => ({
 	root: {

@@ -10,6 +10,7 @@ const GroupsConfigration = {
 	routes: [
 		{
 			path: `/${REACT_BASE_URL}/auth/group/add`,
+			exact: true,
 			component: React.lazy(() => import('./Add'))
 		},
 		{
