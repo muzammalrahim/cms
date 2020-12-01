@@ -3,10 +3,12 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import {list} from '../../../helper/api';
+import {list, del} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
 import  SearchIcon from '@material-ui/icons/Search';
+import  DeleteIcon from '@material-ui/icons/Delete';
+import  EditIcon from '@material-ui/icons/Edit';
 
 
 
@@ -55,13 +57,28 @@ class List extends Component {
 			columns : [
 				{ id: 'id', label: ''},
 				{ id: 'name', label: 'Group Name'},
+				{
+					id: 'actions',
+					label: 'Actions',
+					minWidth: 170,
+					align: 'right',
+					// format: value => value.toLocaleString('en-US')
+				}
 			],
-			rows: []
+			rows: [],
+			params:{search:''}
 		}
 		this.getGroups();
 	}
+	handleDelete(id){
+		del(`adm/auth/group/${id}/`).then((response)=>{
+				this.props.history.push(`/${REACT_BASE_URL}/auth/group`)
+				this.getGroups();
+		})
+	}
 	getGroups(){
-		list('adm/auth/group/').then((response)=>{
+		let { params } = this.state
+		list('adm/auth/group/', params).then((response)=>{
 			this.setState({groupList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
@@ -71,7 +88,7 @@ class List extends Component {
 				// onChange={onSelectAllClick}
 				inputProps={{ 'aria-label': 'select all desserts' }}
 			  />
-				rows.push(this.createData(row.id, row.name))
+				rows.push(this.createData(row.id, row.name, [<EditIcon color='primary'  style={{cursor:"pointer"}} onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/${row.id}`)}}/>,<DeleteIcon style={{cursor:"pointer"}} onClick={()=>this.handleDelete(row.id)} color='secondary'/>]))
 			})
 		this.setState({rows});
 		})
@@ -82,15 +99,15 @@ class List extends Component {
 	};
 
 	handleChangeRowsPerPage = event => {
-		this.setState({rowsPerPage:event.target.value});
-		this.setState({page:0});
+		this.setState({rowsPerPage:+event.target.value});
+		this.setState({page:this.state.page});
 	};
-	createData(id,name) {
-		return {id, name};
+	createData(id,name, actions) {
+		return {id, name, actions};
 	}
 	render(){
 		const { classes } = this.props;
-		let {groupList, rowsPerPage, page, rows, columns} = this.state;
+		let { params:{search}, rowsPerPage, page, rows, columns} = this.state;
 		return (
 			<FusePageCarded
 				classes={{
@@ -102,7 +119,7 @@ class List extends Component {
 					</div>
 				}
 				contentToolbar={
-					<div className="px-24">
+					<div className="px-24"  style={{width:'100%'}}>
 						<span>Groups List</span>
 						<InputBase
 						style={{margin:'2pc' }}
@@ -111,14 +128,22 @@ class List extends Component {
 								root: classes.inputRoot,
 								input: classes.inputInput
 							}}
+							value={search}
+							onChange={(e)=>{
+								let params = {search:e.target.value};
+								this.setState({params});
+								if(!e.target.value){
+									this.getGroups()
+								}
+							}}
 							placeholder="Search Groups"
 							inputProps={{ 'aria-label': 'search groups' }}
 						/>
 						<IconButton type="submit" className={classes.iconButton} aria-label="search">
-							<SearchIcon />
+							<SearchIcon onClick={()=>{this.getGroups()}}/>
 						</IconButton>
 						<span style={{float:'right', marginTop:'30px'}}>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/group/add')}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/add`)}}>
 							Add Group
 						</Button>
 						<Button variant="contained" color="primary" justifyContent="flex-end" style={{marginLeft:'5px'}}>
@@ -167,8 +192,8 @@ class List extends Component {
 								count={rows.length}
 								rowsPerPage={rowsPerPage}
 								page={page}
-								onChangePage={()=>{this.handleChangePage()}}
-								onChangeRowsPerPage={()=>{this.handleChangeRowsPerPage()}}
+								onChangePage={this.handleChangePage}
+								onChangeRowsPerPage={this.handleChangeRowsPerPage}
 							/>
 						</Paper>
 					</div>

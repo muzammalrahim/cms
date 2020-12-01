@@ -67,7 +67,7 @@ class Add extends Component{
 		if(group.name !== ""){
 			post(`adm/auth/group/`, group).then((response)=>{
 				if(e!=="save_and_edit"){
-					this.props.history.push(e==='save'? `/${REACT_BASE_URL}/auth/group` : `/${REACT_BASE_URL}/auth/group/add`)
+					this.props.history.push(e==='save'?`/${REACT_BASE_URL}/auth/group` : `/${REACT_BASE_URL}/auth/group/${response.data.id}`)
 				}
 			})
 		}

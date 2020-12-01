@@ -3,12 +3,14 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
-import {list} from '../../../helper/api';
+import {list, del} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
 import  CloseIcon  from '@material-ui/icons/Close';
 import  CheckIcon from '@material-ui/icons/Check';
 import  SearchIcon from '@material-ui/icons/Search';
+import  DeleteIcon from '@material-ui/icons/Delete';
+import  EditIcon from '@material-ui/icons/Edit';
 import { green } from '@material-ui/core/colors';
 
 
@@ -60,14 +62,14 @@ class List extends Component {
 				{ id: 'email', label: 'Email', minWidth: 100 },
 				{
 					id: 'first_name',
-					label: 'FirstName',
+					label: 'First Name',
 					minWidth: 170,
 					align: 'right',
 					format: value => value.toLocaleString('en-US')
 				},
 				{
 					id: 'last_name',
-					label: 'LastName',
+					label: 'Last Name',
 					minWidth: 170,
 					align: 'right',
 					format: value => value.toLocaleString('en-US')
@@ -78,18 +80,37 @@ class List extends Component {
 					minWidth: 170,
 					align: 'right',
 					// format: value => value.toLocaleString('en-US')
+				},
+				{
+					id: 'actions',
+					label: 'Actions',
+					minWidth: 170,
+					align: 'right',
+					actions: <CloseIcon />
+					// format: value => value.toLocaleString('en-US')
 				}
 			],
-			rows: []
+			rows: [],
+			params:{search:''}
 		}
 		this.getUsers();
 	}
+
+	
+	handleDelete(id){
+		del(`adm/auth/user/${id}/`).then((response)=>{
+				this.props.history.push(`/${REACT_BASE_URL}/auth/user`)
+				this.getUsers();
+		})
+	}
+
 	getUsers(){
-		list('adm/auth/user/').then((response)=>{
+		let {params} = this.state;
+		list('adm/auth/user/', params).then((response)=>{
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />))
+				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />, [<EditIcon color='primary'  style={{cursor:"pointer"}} onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}/>,<DeleteIcon style={{cursor:"pointer"}} onClick={()=>this.handleDelete(row.id)} color='secondary'/>]))
 			})
 		this.setState({rows});
 		})
@@ -103,12 +124,12 @@ class List extends Component {
 		this.setState({rowsPerPage:event.target.value});
 		this.setState({page:0});
 	};
-	createData(id,name, email, first_name, last_name, is_staff) {
-		return {id, name, email, first_name, last_name, is_staff };
+	createData(id,name, email, first_name, last_name, is_staff, actions) {
+		return {id, name, email, first_name, last_name, is_staff, actions };
 	}
 	render(){
 		const { classes } = this.props;
-		let {userList, rowsPerPage, page, rows, columns} = this.state;
+		let {params:{search}, rowsPerPage, page, rows, columns} = this.state;
 		return (
 			<FusePageCarded
 				classes={{
@@ -122,28 +143,26 @@ class List extends Component {
 				contentToolbar={
 					<div className="px-24" style={{width:'100%'}}>
 						<span>Users List</span>
-						{/* <InputBase
-							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px', width:'200px' }}
-							placeholder="Search…"
-							variant="outlined"
-							classes={{
-								root: classes.inputRoot,
-								input: classes.inputInput
-							}}
-							inputProps={{ 'aria-label': 'search' }}
-						/><Button style={{marginRight:'10px', marginLeft: -95 }}><SearchIcon /></Button> */}
 						<InputBase
-						style={{margin:'2pc' }}
+							style={{margin:'2pc' }}
 							className={classes.input}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput
 							}}
+							value={search}
+							onChange={(e)=>{
+								let params = {search:e.target.value};
+								this.setState({params});
+								if(!e.target.value){
+									this.getUsers()
+								}
+							}}
 							placeholder="Search Users"
 							inputProps={{ 'aria-label': 'search users' }}
 						/>
 						<IconButton type="submit" className={classes.iconButton} aria-label="search">
-							<SearchIcon />
+							<SearchIcon onClick={()=>{this.getUsers()}}/>
 						</IconButton>
 						<span style={{float:'right', marginTop:'30px'}}>
 						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/add`)}}>
@@ -162,21 +181,21 @@ class List extends Component {
 								<Table stickyHeader aria-label="sticky table">
 									<TableHead>
 										<TableRow>
-											{columns.map(column => (
-												<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+											{columns.map((column, index) => (
+												<TableCell key={index} align={column.align} style={{ minWidth: column.minWidth }}>
 													{column.label}
 												</TableCell>
 											))}
 										</TableRow>
 									</TableHead>
 									<TableBody>
-										{rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => {
+										{rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => {
 											return (
-												<TableRow hover role="checkbox" tabIndex={-1} key={row.email}>
-													{columns.map(column => {
+												<TableRow hover role="checkbox" tabIndex={-1} key={index}>
+													{columns.map((column, index) => {
 														const value = row[column.id];
 														return (
-															<TableCell key={column.id} align={column.align}>
+															<TableCell key={index} align={column.align} style={{color:column.id === "name" && 'blue', cursor:column.id === "name" && 'pointer'}} onClick={()=>{column.id === "name" && this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}
@@ -195,8 +214,8 @@ class List extends Component {
 								count={rows.length}
 								rowsPerPage={rowsPerPage}
 								page={page}
-								onChangePage={()=>{this.handleChangePage()}}
-								onChangeRowsPerPage={()=>{this.handleChangeRowsPerPage()}}
+								onChangePage={this.handleChangePage}
+								onChangeRowsPerPage={this.handleChangeRowsPerPage}
 							/>
 						</Paper>
 					</div>
