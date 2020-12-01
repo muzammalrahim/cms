@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
-import {list, patch} from '../../../helper/api';
+import {list, patch, del} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
@@ -93,6 +93,13 @@ class Edit extends Component{
 		}
 	}
 
+	handleDelete(){
+		let {id} = this.state.group;
+		del(`adm/auth/group/${id}/`).then((response)=>{
+				this.props.history.push(`/${REACT_BASE_URL}/auth/group`)
+		})
+	}
+
 	componentDidMount() {
 		this.getGroup();
 	}
@@ -115,10 +122,10 @@ class Edit extends Component{
 						<span>Edit Group</span>
 						{/* <Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}}>
 							History
-						</Button>
-						<Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}}>
-							Delete User
 						</Button> */}
+						<Button variant="contained" color="primary" raised justifyContent="flex-end" style={{marginLeft:'30px'}} onClick={()=>this.handleDelete()}>
+							Delete Group
+						</Button>
 					</div>
 				}
 				content={

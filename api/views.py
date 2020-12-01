@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .models import Role
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from .serializers import RoleSerializer, LoginSerializer, UserListSerializer, UserSerializer, ContactUsQuerySerializer
 from django.views.decorators.http import require_http_methods
@@ -190,4 +190,10 @@ class ContactUsQueryDetailView(APIView):
 @api_admin.register(User)  
 class UserApiAdmin(RestFulModelAdmin):  
     filter_backends = [filters.SearchFilter]
-    search_fields = ['username']
+    search_fields = ['username','email', 'first_name', 'last_name']
+    permission_classes = []
+@api_admin.register(Group)  
+class GroupApiAdmin(RestFulModelAdmin):  
+	filter_backends = [filters.SearchFilter]
+	search_fields = ['name']
+	permission_classes = []

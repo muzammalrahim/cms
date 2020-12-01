@@ -4,6 +4,7 @@ import { Button, Grid, TextField } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles';
 import {connect} from 'react-redux';
 import {post} from '../../../helper/api';
+import {REACT_BASE_URL} from '../../../helper/static_data';
 
 const styles = (theme) => ({
 	root: {
@@ -46,7 +47,7 @@ class Add extends Component{
 					this.setState({user})
 					document.getElementById("add_new_user").reset();
 				}else{
-					this.props.history.push(e==='save'?'/admin/auth/user':'/admin/auth/user')
+					this.props.history.push(e==='save' ? `/${REACT_BASE_URL}/auth/user` : `/${REACT_BASE_URL}/auth/user/${response.data.id}`)
 				}
 			})
 		}
