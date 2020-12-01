@@ -3,7 +3,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from .models import Role, User
+from .models import Role
+from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from .serializers import RoleSerializer, LoginSerializer, UserListSerializer, UserSerializer, ContactUsQuerySerializer
 from django.views.decorators.http import require_http_methods
@@ -16,6 +17,10 @@ from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.request import Request
+from django_restful_admin import admin as api_admin  
+from django_restful_admin.admin import RestFulModelAdmin
+from rest_framework import filters
+
 
 
 @require_http_methods(["POST"])
@@ -180,3 +185,14 @@ class ContactUsQueryDetailView(APIView):
 			return Response(response, status=status.HTTP_200_OK)
 		except Exception as e:
 			return Response({'msg': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_admin.register(User)  
+class UserApiAdmin(RestFulModelAdmin):  
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['username','email', 'first_name', 'last_name']
+
+@api_admin.register(Group)  
+class GroupApiAdmin(RestFulModelAdmin):  
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
