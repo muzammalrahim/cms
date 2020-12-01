@@ -122,16 +122,6 @@ class List extends Component {
 				contentToolbar={
 					<div className="px-24" style={{width:'100%'}}>
 						<span>Users List</span>
-						{/* <InputBase
-							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px', width:'200px' }}
-							placeholder="Search…"
-							variant="outlined"
-							classes={{
-								root: classes.inputRoot,
-								input: classes.inputInput
-							}}
-							inputProps={{ 'aria-label': 'search' }}
-						/><Button style={{marginRight:'10px', marginLeft: -95 }}><SearchIcon /></Button> */}
 						<InputBase
 						style={{margin:'2pc' }}
 							className={classes.input}
