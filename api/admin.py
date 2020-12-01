@@ -5,7 +5,7 @@ from django.contrib.auth.models import User, Group, Permission
 # Register your models here.
 
 # Auth models
-admin.site.register(Group)
+# admin.site.register(Group)
 # admin.site.register(User)
 admin.site.register(Permission)
 

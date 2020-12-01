@@ -60,14 +60,14 @@ class List extends Component {
 				{ id: 'email', label: 'Email', minWidth: 100 },
 				{
 					id: 'first_name',
-					label: 'FirstName',
+					label: 'First Name',
 					minWidth: 170,
 					align: 'right',
 					format: value => value.toLocaleString('en-US')
 				},
 				{
 					id: 'last_name',
-					label: 'LastName',
+					label: 'Last Name',
 					minWidth: 170,
 					align: 'right',
 					format: value => value.toLocaleString('en-US')
@@ -80,16 +80,18 @@ class List extends Component {
 					// format: value => value.toLocaleString('en-US')
 				}
 			],
-			rows: []
+			rows: [],
+			params:{search:''}
 		}
 		this.getUsers();
 	}
 	getUsers(){
-		list('adm/auth/user/').then((response)=>{
+		let {params} = this.state;
+		list('adm/auth/user/', params).then((response)=>{
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />))
+				rows.push(this.createData(row.id, row.username, row.email, row.first_name, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />))
 			})
 		this.setState({rows});
 		})
@@ -108,7 +110,7 @@ class List extends Component {
 	}
 	render(){
 		const { classes } = this.props;
-		let {userList, rowsPerPage, page, rows, columns} = this.state;
+		let {params:{search}, rowsPerPage, page, rows, columns} = this.state;
 		return (
 			<FusePageCarded
 				classes={{
@@ -133,17 +135,25 @@ class List extends Component {
 							inputProps={{ 'aria-label': 'search' }}
 						/><Button style={{marginRight:'10px', marginLeft: -95 }}><SearchIcon /></Button> */}
 						<InputBase
-						style={{margin:'2pc' }}
+							style={{margin:'2pc' }}
 							className={classes.input}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput
 							}}
+							value={search}
+							onChange={(e)=>{
+								let params = {search:e.target.value};
+								this.setState({params});
+								if(!e.target.value){
+									this.getUsers()
+								}
+							}}
 							placeholder="Search Users"
 							inputProps={{ 'aria-label': 'search users' }}
 						/>
 						<IconButton type="submit" className={classes.iconButton} aria-label="search">
-							<SearchIcon />
+							<SearchIcon onClick={()=>{this.getUsers()}}/>
 						</IconButton>
 						<span style={{float:'right', marginTop:'30px'}}>
 						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/add`)}}>
@@ -162,21 +172,21 @@ class List extends Component {
 								<Table stickyHeader aria-label="sticky table">
 									<TableHead>
 										<TableRow>
-											{columns.map(column => (
-												<TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+											{columns.map((column, index) => (
+												<TableCell key={index} align={column.align} style={{ minWidth: column.minWidth }}>
 													{column.label}
 												</TableCell>
 											))}
 										</TableRow>
 									</TableHead>
 									<TableBody>
-										{rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => {
+										{rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => {
 											return (
-												<TableRow hover role="checkbox" tabIndex={-1} key={row.email}>
-													{columns.map(column => {
+												<TableRow hover role="checkbox" tabIndex={-1} key={index}>
+													{columns.map((column, index) => {
 														const value = row[column.id];
 														return (
-															<TableCell key={column.id} align={column.align}>
+															<TableCell key={index} align={column.align}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}
