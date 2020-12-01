@@ -1,9 +1,8 @@
-import React from 'react';
 import FuseHighlight from '@fuse/core/FuseHighlight';
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
-import {REACT_BASE_URL} from '../../../../helper/static_data';
+import React from 'react';
 
 function CodeSplittingDoc() {
 	return (
@@ -68,7 +67,7 @@ function CodeSplittingDoc() {
                                 },
                                 routes  : [
                                     {
-                                        path     : '/${REACT_BASE_URL}',
+                                        path     : '/apps/dashboards/project',
                                         component: React.lazy(() => import('./AnalyticsDashboardApp'))
                                     }
                                 ]

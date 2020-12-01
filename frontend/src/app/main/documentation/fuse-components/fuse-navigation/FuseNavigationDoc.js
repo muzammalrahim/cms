@@ -8,7 +8,6 @@ import { authRoles } from 'app/auth';
 import * as Actions from 'app/store/actions';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {REACT_BASE_URL} from '../../../../helper/static_data';
 
 function FuseNavigationDoc(props) {
 	const dispatch = useDispatch();
@@ -129,13 +128,13 @@ function FuseNavigationDoc(props) {
                                         'title'    : 'Dashboards',
                                         'type'     : 'collapse',
                                         'icon'     : 'dashboard',
-                                        'url'      : '/${REACT_BASE_URL}' //optional
+                                        'url'      : '/apps/dashboards/project' //optional
                                         'children' : [
                                             {
                                                 'id'   : 'project',
                                                 'title': 'Project',
                                                 'type' : 'item',
-                                                'url'  : '/${REACT_BASE_URL}'
+                                                'url'  : '/apps/dashboards/project'
                                             }
                                         ]
                                       }
@@ -151,7 +150,7 @@ function FuseNavigationDoc(props) {
                                     'id'   : 'project',
                                     'title': 'Project',
                                     'type' : 'item',
-                                    'url'  : '/${REACT_BASE_URL}/'
+                                    'url'  : '/apps/dashboards/project'
                                 }
                                 `}
 					</FuseHighlight>
@@ -167,7 +166,7 @@ function FuseNavigationDoc(props) {
                                     'id'   : 'project',
                                     'title': 'Project',
                                     'type' : 'item',
-                                    'url'  : '/${REACT_BASE_URL}',
+                                    'url'  : '/apps/dashboards/project',
                                     'exact': true
                                 }
                                 `}
@@ -196,7 +195,7 @@ function FuseNavigationDoc(props) {
                                     'id'   : 'project',
                                     'title': 'Project',
                                     'type' : 'item',
-                                    'url'  : '/${REACT_BASE_URL}'
+                                    'url'  : '/apps/dashboards/project'
                                 }
                                 {
                                     'type': 'divider
@@ -205,7 +204,7 @@ function FuseNavigationDoc(props) {
                                     'id'   : 'project',
                                     'title': 'Project',
                                     'type' : 'item',
-                                    'url'  : '/${REACT_BASE_URL}'
+                                    'url'  : '/apps/dashboards/project'
                                 }
                                 `}
 					</FuseHighlight>

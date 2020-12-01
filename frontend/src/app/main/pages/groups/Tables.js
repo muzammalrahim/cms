@@ -8,7 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import {REACT_BASE_URL} from '../../../helper/static_data';
+import { useHistory } from 'react-router-dom'
 
 const columns = [
 	{ id: 'name', label: 'Groups', minWidth: 170 },
@@ -62,7 +62,7 @@ export default function StickyHeadTable() {
 	};
 
 	const handleEdit = (props)=>{
-		props.history.push(`/${REACT_BASE_URL}/auth/group/Edit`)
+		props.history.push('/admin/auth/group/Edit')
 	}
 
 	return (

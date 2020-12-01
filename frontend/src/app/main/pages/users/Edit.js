@@ -172,23 +172,23 @@ class Edit extends Component{
 							<form id="edit_user" autoComplete="off">
 								<Grid container spacing={3}>
 									<Grid item xs={12} sm={6}>
-										<TextField 
-											id="username" 
-											label="Username" 
+										<TextField
+											id="username"
+											label="Username"
 											value={username}
 											onChange={(e)=>{this.changeHandler(e)}}
-											variant="outlined" 
-											fullWidth 
+											variant="outlined"
+											fullWidth
 											helperText="Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
 										/>
 									</Grid>
 									<Grid item xs={12} sm={6}>
-										<TextField 
-											id="password" 
-											type="password" 
-											label="Password" 
-											variant="outlined" 
-											fullWidth 
+										<TextField
+											id="password"
+											type="password"
+											label="Password"
+											variant="outlined"
+											fullWidth
 											disabled
 											helperText="Raw passwords are not stored, so there is no way to see this user’s password, but you can change the password using this form."
 										/>
@@ -198,17 +198,17 @@ class Edit extends Component{
 										<hr/>
 									</Grid>
 									<Grid item xs={12} md={4}>
-										<TextField 
+										<TextField
 											fullWidth
-											id="first_name" 
-											label="First Name" 
+											id="first_name"
+											label="First Name"
 											variant="outlined"
 											value={first_name}
 											onChange={(e)=>{this.changeHandler(e)}}
 										/>
 									</Grid>
 									<Grid item xs={12} md={4}>
-										<TextField 
+										<TextField
 											fullWidth
 											id="last_name"
 											label="Last Name"
@@ -218,11 +218,11 @@ class Edit extends Component{
 										/>
 									</Grid>
 									<Grid item xs={12} md={4}>
-										<TextField 
+										<TextField
 											fullWidth
-											id="email" 
-											label="Email Address" 
-											variant="outlined" 
+											id="email"
+											label="Email Address"
+											variant="outlined"
 											value={email}
 											onChange={(e)=>{this.changeHandler(e)}}
 										/>
@@ -279,11 +279,11 @@ class Edit extends Component{
 											getOptionLabel={option => option.name}
 											renderOption={(option) => (
 												<React.Fragment>
-													<Checkbox 
-														icon={icon} 
-														checkedIcon={checkedIcon} 
-														style={{ marginRight: 8 }} 
-														checked={groups.includes(option.id)} 
+													<Checkbox
+														icon={icon}
+														checkedIcon={checkedIcon}
+														style={{ marginRight: 8 }}
+														checked={groups.includes(option.id)}
 													/>
 													{option.name}
 												</React.Fragment>
@@ -306,11 +306,11 @@ class Edit extends Component{
 											getOptionLabel={option => option.name}
 											renderOption={(option) => (
 												<React.Fragment>
-													<Checkbox 
-														icon={icon} 
-														checkedIcon={checkedIcon} 
-														style={{ marginRight: 8 }} 
-														checked={user_permissions.includes(option.id)} 
+													<Checkbox
+														icon={icon}
+														checkedIcon={checkedIcon}
+														style={{ marginRight: 8 }}
+														checked={user_permissions.includes(option.id)}
 													/>
 													{option.name}
 												</React.Fragment>
