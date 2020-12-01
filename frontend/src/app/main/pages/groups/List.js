@@ -102,7 +102,7 @@ class List extends Component {
 					</div>
 				}
 				contentToolbar={
-					<div className="px-24">
+					<div className="px-24"  style={{width:'100%'}}>
 						<span>Groups List</span>
 						<InputBase
 						style={{margin:'2pc' }}
@@ -118,7 +118,7 @@ class List extends Component {
 							<SearchIcon />
 						</IconButton>
 						<span style={{float:'right', marginTop:'30px'}}>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/group/add')}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/add`)}}>
 							Add Group
 						</Button>
 						<Button variant="contained" color="primary" justifyContent="flex-end" style={{marginLeft:'5px'}}>

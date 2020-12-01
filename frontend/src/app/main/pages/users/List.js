@@ -176,7 +176,7 @@ class List extends Component {
 													{columns.map(column => {
 														const value = row[column.id];
 														return (
-															<TableCell key={column.id} align={column.align}>
+															<TableCell key={column.id} align={column.align} style={{color:column.id === "name" && 'blue', cursor:column.id === "name" && 'pointer'}} onClick={()=>{column.id === "name" && this.props.history.push(`/${REACT_BASE_URL}/auth/user/${row.id}`)}}>
 																{column.format && typeof value === 'number'
 																	? column.format(value)
 																	: value}
