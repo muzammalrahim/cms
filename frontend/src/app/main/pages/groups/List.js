@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import FusePageCarded from '@fuse/core/FusePageCarded';
-import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper } from '@material-ui/core';
+import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import {list} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
+import  SearchIcon from '@material-ui/icons/Search';
+
 
 
 const styles = theme => ({
@@ -38,7 +40,7 @@ const styles = theme => ({
 		transition: theme.transitions.create('width'),
 		width: '100%',
 		[theme.breakpoints.up('md')]: {
-			width: '20ch'
+			width: '30ch'
 		}
 	}
 });
@@ -103,18 +105,26 @@ class List extends Component {
 					<div className="px-24">
 						<span>Groups List</span>
 						<InputBase
-							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px' }}
-							placeholder="Search…"
-							variant="outlined"
+						style={{margin:'2pc' }}
+							className={classes.input}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput
 							}}
-							inputProps={{ 'aria-label': 'search' }}
+							placeholder="Search Groups"
+							inputProps={{ 'aria-label': 'search groups' }}
 						/>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/group/add`)}}>
+						<IconButton type="submit" className={classes.iconButton} aria-label="search">
+							<SearchIcon />
+						</IconButton>
+						<span style={{float:'right', marginTop:'30px'}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/group/add')}}>
 							Add Group
 						</Button>
+						<Button variant="contained" color="primary" justifyContent="flex-end" style={{marginLeft:'5px'}}>
+							Delete Selected
+						</Button>
+						</span>
 					</div>
 				}
 				content={

@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import FusePageCarded from '@fuse/core/FusePageCarded';
-import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper } from '@material-ui/core';
+import { Button, InputBase, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, IconButton } from '@material-ui/core';
 import { fade, withStyles } from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import {list} from '../../../helper/api';
 import {REACT_BASE_URL} from '../../../helper/static_data';
 import Checkbox from '@material-ui/core/Checkbox';
+import  CloseIcon  from '@material-ui/icons/Close';
+import  CheckIcon from '@material-ui/icons/Check';
+import  SearchIcon from '@material-ui/icons/Search';
+import { green } from '@material-ui/core/colors';
 
 
 const styles = theme => ({
@@ -33,12 +37,12 @@ const styles = theme => ({
 	inputInput: {
 		padding: theme.spacing(1, 1, 1, 0),
 		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+		// paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
 		paddingRight: `calc(1em + ${theme.spacing(4)}px)`,
 		transition: theme.transitions.create('width'),
 		width: '100%',
 		[theme.breakpoints.up('md')]: {
-			width: '20ch'
+			width: '30ch'
 		}
 	}
 });
@@ -85,13 +89,7 @@ class List extends Component {
 			this.setState({userList:response.data})
 			let rows = [];
 			response.data.map((row)=>{
-				let id = <Checkbox
-				// indeterminate={numSelected > 0 && numSelected < rowCount}
-				// checked={rowCount > 0 && numSelected === rowCount}
-				// onChange={onSelectAllClick}
-				inputProps={{ 'aria-label': 'select all desserts' }}
-			  />
-				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()))
+				rows.push(this.createData(row.id, row.username, row.email, row.firstname, row.last_name, row.is_staff.toLocaleString()==='true'? <CheckIcon style={{ color: green[500] }} fontSize="large" />: <CloseIcon color='secondary' fontSize="large" />))
 			})
 		this.setState({rows});
 		})
@@ -122,10 +120,10 @@ class List extends Component {
 					</div>
 				}
 				contentToolbar={
-					<div className="px-24">
+					<div className="px-24" style={{width:'100%'}}>
 						<span>Users List</span>
-						<InputBase
-							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px' }}
+						{/* <InputBase
+							style={{ border: '1px solid',margin:'2pc', borderRadius:'2px', width:'200px' }}
 							placeholder="Search…"
 							variant="outlined"
 							classes={{
@@ -133,10 +131,28 @@ class List extends Component {
 								input: classes.inputInput
 							}}
 							inputProps={{ 'aria-label': 'search' }}
+						/><Button style={{marginRight:'10px', marginLeft: -95 }}><SearchIcon /></Button> */}
+						<InputBase
+						style={{margin:'2pc' }}
+							className={classes.input}
+							classes={{
+								root: classes.inputRoot,
+								input: classes.inputInput
+							}}
+							placeholder="Search Users"
+							inputProps={{ 'aria-label': 'search users' }}
 						/>
-						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push('/admin/auth/user/add')}}>
+						<IconButton type="submit" className={classes.iconButton} aria-label="search">
+							<SearchIcon />
+						</IconButton>
+						<span style={{float:'right', marginTop:'30px'}}>
+						<Button variant="contained" color="primary" justifyContent="flex-end" onClick={()=>{this.props.history.push(`/${REACT_BASE_URL}/auth/user/add`)}}>
 							Add User
 						</Button>
+						<Button variant="contained" color="primary" justifyContent="flex-end" style={{marginLeft:'5px'}}>
+							Delete Selected
+						</Button>
+						</span>
 					</div>
 				}
 				content={
